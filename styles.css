@@ -67,7 +67,7 @@ img {
   left: 50%;
   z-index: 20;
   display: flex;
-  width: min(820px, calc(100% - 36px));
+  width: min(980px, calc(100% - 36px));
   min-height: 46px;
   align-items: center;
   justify-content: space-between;
@@ -375,7 +375,9 @@ h1 .title-accent {
 
 .service-card h3,
 .project-meta h3,
-.case-grid h3 {
+.case-grid h3,
+.process-card h3,
+.case-flow h3 {
   margin-bottom: 10px;
   color: var(--text);
   font-size: 1rem;
@@ -383,10 +385,63 @@ h1 .title-accent {
 }
 
 .service-card p,
-.case-grid p {
+.case-grid p,
+.process-card p,
+.case-flow p {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 0.84rem;
+}
+
+.service-card small {
+  display: block;
+  margin-top: 18px;
+  color: var(--gold-soft);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.process-grid,
+.audience-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.process-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.process-card,
+.audience-card {
+  border: 1px solid var(--gold-line);
+  background: rgba(16, 16, 15, 0.76);
+}
+
+.process-card {
+  min-height: 250px;
+  padding: 24px;
+}
+
+.process-card span {
+  display: block;
+  margin-bottom: 58px;
+  color: var(--gold-soft);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.audience-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.audience-card {
+  min-height: 116px;
+  display: flex;
+  align-items: flex-end;
+  padding: 22px;
+  color: var(--text);
+  font-size: 0.94rem;
+  font-weight: 700;
 }
 
 .work-heading {
@@ -411,7 +466,7 @@ h1 .title-accent {
 
 .project-card {
   position: relative;
-  min-height: 360px;
+  min-height: 430px;
   overflow: hidden;
   border: 1px solid var(--gold-line);
   background: var(--panel-deep);
@@ -426,7 +481,7 @@ h1 .title-accent {
 .project-large {
   grid-column: span 2;
   grid-row: span 2;
-  min-height: 734px;
+  min-height: 874px;
 }
 
 .project-media {
@@ -514,11 +569,20 @@ h1 .title-accent {
   font-size: 1.1rem;
 }
 
-.project-desc {
+.project-desc,
+.project-problem {
   max-width: 300px;
-  margin-bottom: 14px;
   color: var(--muted);
   font-size: 0.78rem;
+}
+
+.project-desc {
+  margin-bottom: 10px;
+}
+
+.project-problem {
+  margin-bottom: 14px;
+  color: rgba(216, 193, 161, 0.64);
 }
 
 .project-meta a {
@@ -565,6 +629,43 @@ h1 .title-accent {
   padding: 22px;
   border: 1px solid var(--gold-line);
   background: rgba(16, 16, 15, 0.76);
+}
+
+.case-flow {
+  display: grid;
+  grid-template-columns: 0.84fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.case-flow-copy,
+.case-flow ol {
+  min-height: 260px;
+  margin: 0;
+  border: 1px solid var(--gold-line);
+  background: rgba(16, 16, 15, 0.76);
+}
+
+.case-flow-copy {
+  padding: 28px;
+}
+
+.case-flow ol {
+  display: grid;
+  gap: 1px;
+  padding: 0;
+  list-style: none;
+  background: var(--gold-line);
+}
+
+.case-flow li {
+  display: flex;
+  align-items: center;
+  padding: 20px 24px;
+  background: #080807;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .case-grid span {
@@ -704,8 +805,14 @@ h1 .title-accent {
   }
 
   .service-grid,
-  .case-grid {
+  .case-grid,
+  .process-grid,
+  .audience-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .case-flow {
+    grid-template-columns: 1fr;
   }
 
   .work-grid {
@@ -795,12 +902,19 @@ h1 .title-accent {
 
   .service-grid,
   .work-grid,
-  .case-grid {
+  .case-grid,
+  .process-grid,
+  .audience-grid {
     grid-template-columns: 1fr;
   }
 
   .service-card {
-    min-height: 190px;
+    min-height: 220px;
+  }
+
+  .process-card,
+  .audience-card {
+    min-height: 170px;
   }
 
   .project-card,
