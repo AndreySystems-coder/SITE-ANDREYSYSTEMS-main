@@ -504,7 +504,7 @@ h1 .title-accent {
   z-index: 2;
 }
 
-.project-meta p {
+.project-meta p:not(.project-desc) {
   margin-bottom: 8px;
 }
 
@@ -512,6 +512,13 @@ h1 .title-accent {
   max-width: 260px;
   margin-bottom: 12px;
   font-size: 1.1rem;
+}
+
+.project-desc {
+  max-width: 300px;
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 0.78rem;
 }
 
 .project-meta a {
@@ -799,7 +806,7 @@ h1 .title-accent {
   .project-card,
   .project-large {
     grid-column: auto;
-    min-height: 410px;
+    min-height: 430px;
   }
 
   .case-visual img {
