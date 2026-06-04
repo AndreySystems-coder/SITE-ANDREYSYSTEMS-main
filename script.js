@@ -2,7 +2,9 @@ const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
 const currentYear = document.querySelector("#currentYear");
 
-currentYear.textContent = new Date().getFullYear();
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
+}
 
 navToggle.addEventListener("click", () => {
   const isOpen = document.body.classList.toggle("nav-open");
@@ -29,3 +31,13 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+
+const quoteForm = document.querySelector("#quoteForm");
+const instagramDirect = "https://www.instagram.com/direct/t/andrey.pradilosilva";
+
+if (quoteForm) {
+  quoteForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    window.open(instagramDirect, "_blank", "noopener,noreferrer");
+  });
+}

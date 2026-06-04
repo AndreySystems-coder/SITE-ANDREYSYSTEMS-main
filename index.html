@@ -39,6 +39,24 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <!-- Google Analytics: substitua G-XXXXXXXXXX pelo ID real quando ativar.
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+    <!-- Microsoft Clarity: substitua CLARITY_PROJECT_ID pelo ID real quando ativar.
+    <script>
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");
+    </script>
+    -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -331,7 +349,7 @@
                 <p class="project-desc">Sistema para centralizar processos, módulos e acompanhamento operacional.</p>
                 <p class="project-problem">Resolve: controles manuais, dados espalhados e falta de visão da operação.</p>
                 <p class="project-details">Status: em uso interno · Tecnologias: React, TypeScript, Node.js</p>
-                <a href="#case">Ver projeto</a>
+                <a href="./projetos/erp-imppel/">Ver case completo</a>
               </div>
             </article>
 
@@ -527,9 +545,47 @@
           </div>
         </section>
 
-        <section class="section faq" id="faq">
+        <section class="section founder" id="quem-e-andrey">
           <div class="section-kicker reveal">
             <span>08</span>
+            <p>Quem é Andrey</p>
+          </div>
+          <div class="founder-panel reveal">
+            <div class="founder-photo" aria-hidden="true">AF</div>
+            <div class="founder-copy">
+              <p class="eyebrow">Fundador da Andrey Systems</p>
+              <h2>Andrey Fabrício</h2>
+              <p>
+                Desenvolvedor do ERP IMPPEL e do projeto Entre os Salvos. Crio sites, sistemas e
+                automações para empresas que querem sair do improviso e organizar processos com
+                tecnologia simples, bonita e funcional.
+              </p>
+              <p>
+                Minha missão é transformar rotinas manuais em soluções digitais claras, ajudando
+                pequenos negócios a ganharem presença, controle e confiança para crescer.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section development" id="em-desenvolvimento">
+          <div class="section-kicker reveal">
+            <span>09</span>
+            <p>Projetos em desenvolvimento</p>
+          </div>
+          <article class="development-card reveal">
+            <span>Status: Em desenvolvimento</span>
+            <h2>Entre os Salvos</h2>
+            <p>
+              Aplicativo focado em crescimento pessoal, hábitos, desafios e evolução diária. O
+              projeto reforça a atuação da Andrey Systems também em produtos digitais próprios.
+            </p>
+          </article>
+        </section>
+
+        <section class="section faq" id="faq">
+          <div class="section-kicker reveal">
+            <span>10</span>
             <p>Perguntas frequentes</p>
           </div>
           <div class="faq-grid">
@@ -554,6 +610,49 @@
               <p>Sim. O desenvolvimento é pensado para a rotina do negócio, evitando soluções genéricas que não encaixam na operação.</p>
             </article>
           </div>
+        </section>
+
+        <section class="section quote" id="orcamento">
+          <div class="section-kicker reveal">
+            <span>11</span>
+            <p>Orçamento</p>
+          </div>
+          <div class="section-heading reveal">
+            <h2>Conte rapidamente o que você precisa.</h2>
+            <p>
+              Preencha as informações principais e continue a conversa no Instagram. Isso ajuda a
+              iniciar o atendimento com mais clareza.
+            </p>
+          </div>
+          <form class="quote-form reveal" id="quoteForm">
+            <label>
+              Nome
+              <input type="text" name="nome" autocomplete="name" required />
+            </label>
+            <label>
+              Empresa
+              <input type="text" name="empresa" autocomplete="organization" />
+            </label>
+            <label>
+              Segmento
+              <input type="text" name="segmento" placeholder="Ex.: construção civil, academia, igreja" />
+            </label>
+            <label>
+              O que precisa
+              <textarea name="necessidade" rows="4" placeholder="Site, ERP, automação, landing page..." required></textarea>
+            </label>
+            <label>
+              Orçamento aproximado
+              <select name="orcamento">
+                <option value="Ainda não defini">Ainda não defini</option>
+                <option value="Até R$ 1.000">Até R$ 1.000</option>
+                <option value="R$ 1.000 a R$ 3.000">R$ 1.000 a R$ 3.000</option>
+                <option value="R$ 3.000 a R$ 7.000">R$ 3.000 a R$ 7.000</option>
+                <option value="Acima de R$ 7.000">Acima de R$ 7.000</option>
+              </select>
+            </label>
+            <button class="button primary" type="submit">Continuar no Instagram</button>
+          </form>
         </section>
 
         <section class="final-cta" id="contato">
