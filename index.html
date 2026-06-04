@@ -93,7 +93,7 @@
       }
     </script>
   </head>
-  <body>
+  <body class="is-loading">
     <div class="grain" aria-hidden="true"></div>
     <div class="site-shell">
       <header class="site-header">
@@ -125,26 +125,53 @@
       </header>
 
       <main>
-        <section class="hero" id="home">
-          <div class="hero-art reveal" aria-hidden="true">
-            <img
-              src="./assets/images/premium-workspace.png"
-              width="1536"
-              height="1024"
-              alt=""
-              fetchpriority="high"
-            />
-          </div>
+        <section class="hero" id="home" data-section="01">
+          <div class="hero-frame reveal">
+            <div class="hero-mark" aria-hidden="true">
+              <span>AS</span>
+              <small>.01</small>
+            </div>
 
-          <div class="hero-content reveal">
-            <p class="eyebrow">Sites, sistemas e automações para empresas</p>
+            <div class="hero-side hero-side-left" aria-hidden="true">
+              <span>Project</span>
+              <span>Andrey Systems</span>
+              <span>Launch 2026</span>
+            </div>
+
+            <div class="hero-side hero-side-right" aria-hidden="true">
+              <span>ERP</span>
+              <span>Websites</span>
+              <span>Automations</span>
+            </div>
+
+            <div class="hero-art parallax-slow" aria-hidden="true">
+              <img
+                src="./assets/images/premium-workspace.png"
+                width="1536"
+                height="1024"
+                alt=""
+                fetchpriority="high"
+              />
+            </div>
+
+            <div class="hero-content">
+            <p class="eyebrow">Software house independente · design e desenvolvimento</p>
             <h1>
-              <span class="title-main">Sites, Sistemas</span>
-              <span class="title-accent">e Automações</span>
+              <span class="title-main">
+                <span>Sistemas</span>
+                <span>que</span>
+              </span>
+              <span class="title-main">
+                <span>resolvem</span>
+              </span>
+              <span class="title-accent">
+                <span>problemas</span>
+                <span>reais.</span>
+              </span>
             </h1>
             <p>
-              Desenvolvo sites profissionais, ERPs e ferramentas sob medida para empresas que
-              querem vender melhor, organizar processos e crescer com presença digital.
+              Sites, ERPs e automações para empresas que querem crescer com organização,
+              presença digital e processos mais inteligentes.
             </p>
             <div class="hero-actions">
               <a
@@ -159,12 +186,18 @@
             </div>
           </div>
 
+            <div class="hero-scroll" aria-hidden="true">
+              <span>Scroll</span>
+              <i></i>
+            </div>
+          </div>
+
           <div class="hero-footer reveal" aria-label="Especialidades">
             <span>Websites</span>
-            <span>Sistemas</span>
-            <span>ERPs</span>
-            <span>Automações</span>
-            <span>Consultoria</span>
+            <span>Sistemas sob medida</span>
+            <span>ERP empresarial</span>
+            <span>Automação de processos</span>
+            <span>Consultoria operacional</span>
           </div>
         </section>
 
@@ -339,8 +372,9 @@
           </div>
 
           <div class="work-grid">
-            <article class="project-card project-large reveal">
-              <div class="project-media media-imppel">
+            <article class="project-card project-large reveal parallax-card">
+              <div class="project-number" aria-hidden="true">.01</div>
+              <div class="project-media media-imppel parallax-slow">
                 <span>ERP</span>
               </div>
               <div class="project-meta">
@@ -353,8 +387,9 @@
               </div>
             </article>
 
-            <article class="project-card reveal">
-              <div class="project-media media-salvos">
+            <article class="project-card reveal parallax-card">
+              <div class="project-number" aria-hidden="true">.02</div>
+              <div class="project-media media-salvos parallax-slow">
                 <span>ES</span>
               </div>
               <div class="project-meta">
@@ -369,8 +404,9 @@
               </div>
             </article>
 
-            <article class="project-card reveal">
-              <div class="project-media media-civil">
+            <article class="project-card reveal parallax-card">
+              <div class="project-number" aria-hidden="true">.03</div>
+              <div class="project-media media-civil parallax-slow">
                 <span>CC</span>
               </div>
               <div class="project-meta">
@@ -385,8 +421,9 @@
               </div>
             </article>
 
-            <article class="project-card reveal">
-              <div class="project-media media-academia">
+            <article class="project-card reveal parallax-card">
+              <div class="project-number" aria-hidden="true">.04</div>
+              <div class="project-media media-academia parallax-slow">
                 <span>MT</span>
               </div>
               <div class="project-meta">
@@ -401,8 +438,9 @@
               </div>
             </article>
 
-            <article class="project-card reveal">
-              <div class="project-media media-igreja">
+            <article class="project-card reveal parallax-card">
+              <div class="project-number" aria-hidden="true">.05</div>
+              <div class="project-media media-igreja parallax-slow">
                 <span>IG</span>
               </div>
               <div class="project-meta">
@@ -429,7 +467,7 @@
             </p>
           </div>
 
-          <div class="case-visual reveal">
+          <div class="case-visual reveal parallax-slow">
             <img
               src="./assets/images/erp-imppel-showcase.png"
               width="1536"
@@ -551,7 +589,9 @@
             <p>Quem é Andrey</p>
           </div>
           <div class="founder-panel reveal">
-            <div class="founder-photo" aria-hidden="true">AF</div>
+            <div class="founder-photo" aria-label="Espaço reservado para foto profissional de Andrey Fabrício">
+              <span>Foto profissional futura</span>
+            </div>
             <div class="founder-copy">
               <p class="eyebrow">Fundador da Andrey Systems</p>
               <h2>Andrey Fabrício</h2>
