@@ -371,8 +371,24 @@
           <div class="work-grid">
             <article class="project-card project-large reveal parallax-card">
               <div class="project-number" aria-hidden="true">.01</div>
-              <div class="project-media media-imppel parallax-slow">
-                <span>ERP</span>
+              <div class="project-media media-imppel project-gallery parallax-slow">
+                <img
+                  class="project-shot project-shot-main"
+                  src="./assets/images/erp-dashboard-real.png"
+                  width="1920"
+                  height="1080"
+                  loading="lazy"
+                  alt="Painel principal do ERP IMPPEL"
+                />
+                <img
+                  class="project-shot project-shot-float"
+                  src="./assets/images/erp-budget-real.png"
+                  width="1920"
+                  height="1080"
+                  loading="lazy"
+                  alt="Tela de orçamento do ERP IMPPEL"
+                />
+                <span>ERP IMPPEL</span>
               </div>
               <div class="project-meta">
                 <p>ERP personalizado · operação interna</p>
@@ -386,15 +402,31 @@
 
             <article class="project-card reveal parallax-card">
               <div class="project-number" aria-hidden="true">.02</div>
-              <div class="project-media media-salvos parallax-slow">
-                <span>ES</span>
+              <div class="project-media media-salvos project-gallery parallax-slow">
+                <img
+                  class="project-shot project-shot-main"
+                  src="./assets/images/entreossalvos-dark-real.png"
+                  width="1920"
+                  height="1080"
+                  loading="lazy"
+                  alt="Dashboard do EntreosSalvos em modo escuro"
+                />
+                <img
+                  class="project-shot project-shot-float"
+                  src="./assets/images/entreossalvos-light-real.png"
+                  width="1920"
+                  height="1080"
+                  loading="lazy"
+                  alt="Dashboard do EntreosSalvos em modo claro"
+                />
+                <span>Beta privado</span>
               </div>
               <div class="project-meta">
-                <p>Site institucional · presença digital</p>
+                <p>SaaS · beta privado</p>
                 <h3>EntreosSalvos</h3>
-                <p class="project-desc">Presença digital com identidade clara e comunicação direta para o público.</p>
-                <p class="project-problem">Resolve: falta de página profissional para apresentar mensagem, propósito e contato.</p>
-                <p class="project-details">Status: em desenvolvimento · Categoria: SaaS / institucional</p>
+                <p class="project-desc">Plataforma focada em hábitos, rotina, disciplina e desenvolvimento pessoal.</p>
+                <p class="project-problem">Resolve: dificuldade de manter constância, acompanhar evolução e estruturar rotina.</p>
+                <p class="project-details">Status: em desenvolvimento · Categoria: SaaS · Tecnologias: React, Node.js</p>
                 <a href="https://www.instagram.com/direct/t/andrey.pradilosilva" target="_blank" rel="noreferrer">
                   Chamar no Direct
                 </a>
@@ -464,14 +496,25 @@
             </p>
           </div>
 
-          <div class="case-visual reveal parallax-slow">
-            <img
-              src="./assets/images/erp-imppel-showcase.png"
-              width="1536"
-              height="1024"
-              loading="lazy"
-              alt="Prévia visual do ERP IMPPEL, sistema personalizado para gestão empresarial"
-            />
+          <div class="case-visual case-gallery reveal parallax-slow">
+            <figure class="case-gallery-main">
+              <img
+                src="./assets/images/erp-dashboard-real.png"
+                width="1920"
+                height="1080"
+                loading="lazy"
+                alt="Painel principal do ERP IMPPEL"
+              />
+              <figcaption>
+                <strong>ERP IMPPEL</strong>
+                Sistema completo para gestão de obras, materiais, estoque, clientes, financeiro e pós-venda.
+              </figcaption>
+            </figure>
+            <div class="case-gallery-strip" aria-label="Telas reais do ERP IMPPEL">
+              <img src="./assets/images/erp-login-real.png" width="1920" height="1080" loading="lazy" alt="Login do ERP IMPPEL" />
+              <img src="./assets/images/erp-inventory-real.png" width="1920" height="1080" loading="lazy" alt="Tela de estoque do ERP IMPPEL" />
+              <img src="./assets/images/erp-budget-real.png" width="1920" height="1080" loading="lazy" alt="Tela de orçamentos do ERP IMPPEL" />
+            </div>
           </div>
 
           <div class="case-grid reveal">
@@ -586,20 +629,25 @@
             <p>Quem é Andrey</p>
           </div>
           <div class="founder-panel reveal">
-            <div class="founder-photo" aria-label="Espaço reservado para foto profissional de Andrey Fabrício">
-              <span>Foto profissional futura</span>
+            <div class="founder-photo" aria-label="Foto oficial de Andrey Fabrício">
+              <img
+                src="./assets/images/andrey-profile-real.jpeg"
+                width="1246"
+                height="1246"
+                loading="lazy"
+                alt="Foto oficial de Andrey Fabrício, fundador da Andrey Systems"
+              />
             </div>
             <div class="founder-copy">
               <p class="eyebrow">Fundador da Andrey Systems</p>
               <h2>Andrey Fabrício</h2>
               <p>
-                Desenvolvedor do ERP IMPPEL e do projeto EntreosSalvos. Crio sites, sistemas e
-                automações para empresas que querem sair do improviso e organizar processos com
-                tecnologia simples, bonita e funcional.
+                Sou Andrey, fundador da Andrey Systems. Desenvolvo sistemas, ERPs, sites e
+                automações focados em resolver problemas reais de empresas.
               </p>
               <p>
-                Minha missão é transformar rotinas manuais em soluções digitais claras, ajudando
-                pequenos negócios a ganharem presença, controle e confiança para crescer.
+                Meu objetivo é transformar processos manuais em operações organizadas e escaláveis,
+                com soluções digitais simples, bonitas e funcionais.
               </p>
             </div>
           </div>
@@ -613,6 +661,10 @@
           <article class="development-card reveal">
             <span>Status: Em desenvolvimento</span>
             <h2>EntreosSalvos</h2>
+            <div class="development-preview" aria-label="Prévias reais do EntreosSalvos">
+              <img src="./assets/images/entreossalvos-light-real.png" width="1920" height="1080" loading="lazy" alt="EntreosSalvos em modo claro" />
+              <img src="./assets/images/entreossalvos-dark-real.png" width="1920" height="1080" loading="lazy" alt="EntreosSalvos em modo escuro" />
+            </div>
             <p>
               Aplicativo focado em crescimento pessoal, hábitos, desafios e evolução diária. O
               projeto reforça a atuação da Andrey Systems também em produtos digitais próprios.
@@ -634,16 +686,16 @@
           </div>
           <div class="testimonial-grid">
             <article class="testimonial-card reveal">
-              <span>IMPPEL</span>
-              <p>“O ERP ajudou a centralizar etapas e enxergar melhor o fluxo interno.”</p>
+              <span>★★★★★</span>
+              <p>“O sistema ficou muito mais fácil de usar do que eu imaginava. Conseguimos organizar clientes, materiais e serviços em um só lugar.”</p>
             </article>
             <article class="testimonial-card reveal">
-              <span>Construção civil</span>
-              <p>“A apresentação ficou mais profissional e facilitou explicar serviços e orçamentos.”</p>
+              <span>★★★★★</span>
+              <p>“Todas as alterações que pedi foram feitas rapidamente. O resultado ficou exatamente como eu precisava.”</p>
             </article>
             <article class="testimonial-card reveal">
-              <span>Pequeno negócio</span>
-              <p>“Ter uma solução clara reduz improviso e deixa o atendimento mais organizado.”</p>
+              <span>★★★★★</span>
+              <p>“Gostei porque não entregaram apenas um site bonito. Entenderam o problema da empresa e resolveram.”</p>
             </article>
           </div>
         </section>
