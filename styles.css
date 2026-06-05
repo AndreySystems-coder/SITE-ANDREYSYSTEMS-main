@@ -2350,3 +2350,276 @@ h1 .title-accent span {
     padding-bottom: 116px;
   }
 }
+
+/* UX refinement sprint: language, theme, cleaner hero, consistent premium system. */
+.header-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 6px;
+  padding-left: 8px;
+  border-left: 1px solid rgba(216, 193, 161, 0.14);
+}
+
+.control-button {
+  min-height: 32px;
+  border: 1px solid rgba(216, 193, 161, 0.14);
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(245, 241, 235, 0.7);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 0 10px;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.control-button:hover,
+.control-button:focus-visible,
+.control-button.is-active {
+  border-color: rgba(216, 193, 161, 0.36);
+  background: rgba(216, 193, 161, 0.16);
+  color: var(--text);
+}
+
+.theme-toggle {
+  min-width: 58px;
+}
+
+.tech-hero .hero-mark,
+.tech-hero .hero-side,
+.tech-hero .hero-scroll {
+  display: none !important;
+}
+
+.tech-hero .hero-frame {
+  min-height: min(610px, calc(100svh - 178px));
+  padding-top: 82px;
+  padding-bottom: 118px;
+}
+
+.tech-hero .hero-content {
+  transform: translateY(-6px);
+}
+
+.tech-hero .hero-pillars {
+  height: min(25vh, 220px);
+  opacity: 0.72;
+}
+
+.hero-pillars span {
+  animation: pillarRise 1100ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards, pillarBreath 7s ease-in-out infinite;
+  animation-delay: var(--d), calc(var(--d) + 1200ms);
+}
+
+.service-card,
+.process-card,
+.trust-card,
+.result-card,
+.faq-item,
+.testimonial-card,
+.case-grid article,
+.case-proof article {
+  min-height: auto;
+  padding: 22px;
+}
+
+.trust-card span,
+.process-card span,
+.service-card span {
+  margin-bottom: 30px;
+}
+
+.section {
+  padding-top: 104px;
+  padding-bottom: 104px;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading p,
+.work-heading p,
+.case-heading p,
+.about-copy p,
+.service-card p,
+.trust-card p,
+.faq-item p,
+.case-grid p,
+.process-card p,
+.case-flow p {
+  color: rgba(245, 241, 235, 0.66);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.testimonial-card {
+  border: 1px solid rgba(216, 193, 161, 0.13);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.055), transparent 38%),
+    linear-gradient(180deg, rgba(10, 15, 22, 0.82), rgba(4, 6, 10, 0.9));
+  box-shadow: 0 26px 90px rgba(0, 0, 0, 0.28);
+}
+
+.testimonial-card span {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--gold-soft);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.testimonial-card p {
+  margin: 0;
+  color: rgba(245, 241, 235, 0.72);
+  font-size: 0.92rem;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --black: #eee8df;
+  --black-soft: #e8dfd3;
+  --panel: rgba(255, 252, 247, 0.78);
+  --panel-deep: #f7f1e8;
+  --navy: #d9d3ca;
+  --navy-deep: #f3ece2;
+  --text: #16130f;
+  --muted: rgba(22, 19, 15, 0.68);
+  --faint: rgba(22, 19, 15, 0.38);
+  --gold: #8d6b3f;
+  --gold-soft: rgba(141, 107, 63, 0.78);
+  --gold-line: rgba(141, 107, 63, 0.18);
+}
+
+[data-theme="light"] body {
+  background:
+    radial-gradient(80% 55% at 50% 18%, rgba(216, 193, 161, 0.35), transparent 34rem),
+    linear-gradient(180deg, #f4eee6, #e8dfd3);
+  color: var(--text);
+}
+
+[data-theme="light"] .site-header,
+[data-theme="light"] .hero-frame,
+[data-theme="light"] .project-card,
+[data-theme="light"] .service-card,
+[data-theme="light"] .process-card,
+[data-theme="light"] .trust-card,
+[data-theme="light"] .result-card,
+[data-theme="light"] .faq-item,
+[data-theme="light"] .testimonial-card,
+[data-theme="light"] .founder-panel,
+[data-theme="light"] .quote-form,
+[data-theme="light"] .case-grid article,
+[data-theme="light"] .case-proof article {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.78), transparent 42%),
+    rgba(246, 239, 229, 0.88);
+  box-shadow: 0 26px 90px rgba(77, 57, 34, 0.12);
+}
+
+[data-theme="light"] .tech-hero {
+  background:
+    radial-gradient(80% 55% at 50% 50%, rgba(216, 193, 161, 0.38) 0%, rgba(205, 165, 116, 0.18) 34%, rgba(235, 228, 218, 0.86) 78%),
+    #efe7dc;
+}
+
+[data-theme="light"] .tech-grid {
+  opacity: 0.24;
+  mix-blend-mode: multiply;
+}
+
+[data-theme="light"] .hero-pillars span {
+  background:
+    linear-gradient(to bottom, rgba(141, 107, 63, 0.12), transparent 18%),
+    rgba(45, 35, 25, 0.85);
+}
+
+[data-theme="light"] .button.primary,
+[data-theme="light"] .site-nav .nav-cta {
+  background: linear-gradient(180deg, #2a2219, #17130f);
+  color: #f5efe7;
+}
+
+[data-theme="light"] .button.secondary,
+[data-theme="light"] .control-button {
+  color: rgba(22, 19, 15, 0.72);
+}
+
+@keyframes pillarBreath {
+  0%,
+  100% {
+    opacity: 0.76;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 900px) {
+  .header-controls {
+    margin: 4px 0 0;
+    padding: 8px 0 0;
+    border-left: 0;
+    border-top: 1px solid rgba(216, 193, 161, 0.14);
+  }
+
+  .tech-hero .hero-frame {
+    min-height: 620px;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .tech-hero .hero-frame {
+    min-height: 620px;
+    padding: 66px 18px 104px;
+  }
+
+  .tech-hero h1 {
+    font-size: clamp(2.15rem, 9.8vw, 2.9rem) !important;
+  }
+
+  .section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+
+  .service-card,
+  .process-card,
+  .trust-card,
+  .result-card,
+  .faq-item,
+  .testimonial-card,
+  .case-grid article,
+  .case-proof article {
+    padding: 20px;
+  }
+
+  .service-grid,
+  .process-grid,
+  .trust-grid,
+  .results-grid,
+  .faq-grid,
+  .testimonial-grid {
+    gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-pillars span {
+    animation: none;
+    height: var(--h);
+  }
+}
