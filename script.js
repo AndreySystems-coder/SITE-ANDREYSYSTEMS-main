@@ -103,7 +103,7 @@ const translations = {
       "Template demonstrativo · agenda e comunidade",
     ],
     projectTitles: ["ERP IMPPEL", "EntreosSalvos", "Template Construção Civil", "Template Academia", "Template Igreja"],
-    projectBadges: ["ERP IMPPEL", "Em desenvolvimento", "Construção", "Fitness", "Comunidade"],
+    projectBadges: ["ERP IMPPEL", "SaaS em desenvolvimento", "Construção", "Fitness", "Comunidade"],
     projectDescriptions: [
       "Sistema para centralizar processos, módulos e acompanhamento operacional.",
       "Plataforma focada em hábitos, rotina, disciplina e desenvolvimento pessoal.",
@@ -286,7 +286,7 @@ const translations = {
       "Demo template · events and community",
     ],
     projectTitles: ["ERP IMPPEL", "EntreosSalvos", "Construction Template", "Gym Template", "Church Template"],
-    projectBadges: ["ERP IMPPEL", "In development", "Construction", "Fitness", "Community"],
+    projectBadges: ["ERP IMPPEL", "SaaS in development", "Construction", "Fitness", "Community"],
     projectDescriptions: [
       "System to centralize processes, modules and operational tracking.",
       "Platform focused on habits, routine, discipline and personal development.",
@@ -545,7 +545,7 @@ const applyLanguage = (lang) => {
   if (document.querySelector(".case-page-hero")) {
     setText(".site-footer span:last-child", copy.erpFooterRight);
   } else {
-    setText(".site-footer span:last-child", `© ${new Date().getFullYear()} ${copy.footerLegal}`);
+    setText(".site-footer span:last-child", `${new Date().getFullYear()} — ${copy.footerLegal}`);
   }
   setText(".case-page-copy .eyebrow", copy.erpPageBadge);
   setText(".case-page-copy h1", copy.erpPageTitle);
