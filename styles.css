@@ -4055,9 +4055,9 @@ body::before {
   --text: #102033;
   --muted: rgba(16, 32, 51, 0.72);
   --faint: rgba(16, 32, 51, 0.42);
-  --gold: #c76b2b;
-  --gold-soft: rgba(199, 107, 43, 0.78);
-  --gold-line: rgba(199, 107, 43, 0.18);
+  --gold: #315fbd;
+  --gold-soft: rgba(49, 95, 189, 0.78);
+  --gold-line: rgba(49, 95, 189, 0.18);
 }
 
 [data-theme="light"] body {
@@ -4163,7 +4163,7 @@ body::before {
 [data-theme="light"] .case-proof span,
 [data-theme="light"] .development-card > span,
 [data-theme="light"] .testimonial-card span {
-  color: #c76b2b;
+  color: #315fbd;
 }
 
 [data-theme="light"] .site-header {
@@ -4254,8 +4254,8 @@ body::before {
 }
 
 [data-theme="light"] .template-cta {
-  border-color: rgba(199, 107, 43, 0.16);
-  background: linear-gradient(180deg, #ff9858, #d96f2f);
+  border-color: rgba(49, 95, 189, 0.16);
+  background: linear-gradient(180deg, #456fd4, #244a9c);
   color: #ffffff;
 }
 
@@ -4299,7 +4299,7 @@ body::before {
 }
 
 [data-theme="light"] .timeline-list li::after {
-  color: #c76b2b;
+  color: #315fbd;
 }
 
 [data-theme="light"] .case-gallery-main figcaption {
@@ -4321,7 +4321,105 @@ body::before {
 }
 
 [data-theme="light"] .site-footer {
-  color: rgba(16, 32, 51, 0.72);
+  border-top-color: rgba(36, 58, 84, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.64), rgba(238, 244, 250, 0.92));
+  color: rgba(16, 32, 51, 0.76);
+}
+
+[data-theme="light"] .site-footer span:first-child {
+  color: #17365f;
+}
+
+[data-theme="light"] .project-number,
+[data-theme="light"] .section-kicker span {
+  border-color: rgba(49, 95, 189, 0.18);
+  color: #315fbd;
+}
+
+.founder-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.founder-highlights span {
+  display: inline-flex;
+  padding: 8px 10px;
+  border: 1px solid rgba(216, 193, 161, 0.16);
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+[data-theme="light"] .founder-highlights span {
+  border-color: rgba(49, 95, 189, 0.16);
+  background: rgba(255, 255, 255, 0.62);
+  color: #315fbd;
+}
+
+[data-theme="light"] .project-meta > p:first-child,
+[data-theme="light"] .project-details {
+  color: rgba(49, 95, 189, 0.82);
+}
+
+[data-theme="light"] .project-card a {
+  color: #244a9c;
+}
+
+[data-theme="light"] .development-card {
+  background:
+    radial-gradient(28rem 16rem at 78% 18%, rgba(137, 91, 255, 0.08), transparent 72%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(245, 249, 253, 0.82));
+}
+
+.template-fitness {
+  align-items: stretch;
+}
+
+.template-preview.template-fitness {
+  width: min(72%, 350px);
+  min-height: 292px;
+  transform: perspective(820px) rotateX(0deg) rotateY(7deg) rotateZ(-2deg);
+}
+
+.template-fitness .template-hero {
+  min-height: 116px;
+  align-content: end;
+}
+
+.template-fitness .template-plan-grid {
+  padding-top: 10px;
+}
+
+.template-fitness .template-cta {
+  margin-left: auto;
+}
+
+.template-preview.template-church {
+  width: min(78%, 390px);
+  border-radius: 0 0 32px 0;
+  transform: perspective(820px) rotateX(3deg) rotateY(-3deg);
+}
+
+.template-church .template-service-row {
+  grid-template-columns: 1fr;
+}
+
+.template-church .template-service-row i {
+  min-height: 30px;
+  text-align: left;
+}
+
+.template-preview.template-civil {
+  transform: perspective(820px) rotateX(5deg) rotateY(-9deg);
+}
+
+.template-civil .template-service-row {
+  grid-template-columns: 1.2fr 1fr 1fr;
 }
 
 @media (max-width: 900px) {

@@ -53,10 +53,11 @@ const translations = {
     aboutKicker: "Sobre",
     aboutTitle: "Andrey Fabrício",
     aboutText: "Criador da Andrey Systems. Desenvolvo sites, sistemas e automações para transformar processos manuais em soluções digitais simples, bonitas e funcionais.",
-    founderKicker: "Quem é Andrey",
+    founderKicker: "Sobre Andrey",
     founderBadge: "Fundador da Andrey Systems",
-    founderText1: "Sou Andrey, fundador da Andrey Systems. Desenvolvo sistemas, ERPs, sites e automações focados em resolver problemas reais de empresas.",
-    founderText2: "Meu objetivo é transformar processos manuais em operações organizadas e escaláveis, com soluções digitais simples, bonitas e funcionais.",
+    founderText1: "Sou Andrey, fundador da Andrey Systems. Crio sites, sistemas, ERPs e automações para transformar operações manuais em soluções digitais claras, bonitas e funcionais.",
+    founderText2: "A Andrey Systems nasceu para ajudar pequenas empresas a ganhar presença, controle e confiança com tecnologia sob medida, sem depender de improviso, planilhas soltas ou processos difíceis de acompanhar.",
+    founderHighlights: ["ERP IMPPEL", "EntreosSalvos", "Sites profissionais", "Automações"],
     developmentKicker: "Projetos em desenvolvimento",
     developmentTitle: "EntreosSalvos",
     developmentText: "Aplicativo focado em crescimento pessoal, hábitos, desafios e evolução diária.",
@@ -235,10 +236,11 @@ const translations = {
     aboutKicker: "About",
     aboutTitle: "Andrey Fabrício",
     aboutText: "Creator of Andrey Systems. I develop websites, systems and automations to turn manual processes into simple, beautiful and functional digital solutions.",
-    founderKicker: "Who is Andrey",
+    founderKicker: "About Andrey",
     founderBadge: "Founder of Andrey Systems",
-    founderText1: "I am Andrey, founder of Andrey Systems. I develop systems, ERPs, websites and automations focused on solving real business problems.",
-    founderText2: "My goal is to transform manual processes into organized and scalable operations with simple, beautiful and functional digital solutions.",
+    founderText1: "I am Andrey, founder of Andrey Systems. I build websites, systems, ERPs and automations to turn manual operations into clear, polished and functional digital solutions.",
+    founderText2: "Andrey Systems was created to help small businesses gain presence, control and confidence with custom technology, without depending on improvisation, scattered spreadsheets or hard-to-track processes.",
+    founderHighlights: ["ERP IMPPEL", "EntreosSalvos", "Professional websites", "Automations"],
     developmentKicker: "Projects in development",
     developmentTitle: "EntreosSalvos",
     developmentText: "App focused on personal growth, habits, challenges and daily evolution.",
@@ -513,9 +515,10 @@ const applyLanguage = (lang) => {
   setText("#sobre .section-kicker p", copy.aboutKicker);
   setText("#sobre .about-copy h2", copy.aboutTitle);
   setText("#sobre .about-copy p", copy.aboutText);
-  setText("#quem-e-andrey .section-kicker p", copy.founderKicker);
-  setText(".founder-copy .eyebrow", copy.founderBadge);
-  setAllText(".founder-copy > p:not(.eyebrow)", [copy.founderText1, copy.founderText2]);
+  setText("#sobre .section-kicker p", copy.founderKicker);
+  setText("#sobre .founder-copy .eyebrow", copy.founderBadge);
+  setAllText("#sobre .founder-copy > p:not(.eyebrow)", [copy.founderText1, copy.founderText2]);
+  setAllText("#sobre .founder-highlights span", copy.founderHighlights);
   setText("#em-desenvolvimento .section-kicker p", copy.developmentKicker);
   setText("#em-desenvolvimento .development-card > span", copy.developmentStatus);
   setText("#em-desenvolvimento h2", copy.developmentTitle);
