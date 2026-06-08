@@ -125,6 +125,16 @@ const translations = {
       "Status: template demonstrativo · Público: igrejas e comunidades",
     ],
     projectDirectCtas: ["Chamar no Direct", "Chamar no Direct", "Chamar no Direct", "Chamar no Direct"],
+    templatePreviews: [
+      ["Obras & Impermeabilização", "Orçamento técnico em até 24h", "Solicitar orçamento"],
+      ["Treino forte, rotina clara", "Planos, horários e matrícula online", "Começar agora"],
+      ["Comunidade, cultos e eventos", "Agenda, ministérios e pedidos de oração", "Ver programação"],
+    ],
+    templateChips: [
+      ["Laudos", "Reformas", "Obras"],
+      ["Mensal", "Personal"],
+      ["Cultos", "Eventos", "Oração"],
+    ],
     caseFlowBadge: "Fluxo operacional",
     caseFlowTitle: "Da entrada do pedido ao acompanhamento.",
     caseFlowText: "O ERP foi pensado para conectar etapas que antes ficavam separadas. A empresa passa a ter um caminho mais claro para registrar, acompanhar e consultar informações.",
@@ -297,6 +307,16 @@ const translations = {
       "Status: demo template · Audience: churches and communities",
     ],
     projectDirectCtas: ["Message on Instagram", "Message on Instagram", "Message on Instagram", "Message on Instagram"],
+    templatePreviews: [
+      ["Construction & waterproofing", "Technical quote within 24h", "Request a quote"],
+      ["Strong training, clear routine", "Plans, schedules and online enrollment", "Start now"],
+      ["Community, services and events", "Schedule, ministries and prayer requests", "View schedule"],
+    ],
+    templateChips: [
+      ["Reports", "Renovation", "Projects"],
+      ["Monthly", "Personal"],
+      ["Services", "Events", "Prayer"],
+    ],
     caseFlowBadge: "Operational flow",
     caseFlowTitle: "From incoming request to tracking.",
     caseFlowText: "The ERP was designed to connect steps that used to live apart. The company gains a clearer path to register, monitor and retrieve information.",
@@ -471,6 +491,10 @@ const applyLanguage = (lang) => {
   setAllText("#portfolio .project-details", copy.projectDetails);
   setText(".media-imppel + .project-meta a", copy.erpCardCta);
   setAllText("#portfolio .project-meta a[target]", copy.projectDirectCtas);
+  setCards("#portfolio .template-preview", copy.templatePreviews, [".template-hero strong", ".template-hero small", ".template-cta"]);
+  setAllText("#portfolio .template-civil .template-service-row i", copy.templateChips[0]);
+  setAllText("#portfolio .template-fitness .template-plan-grid i", copy.templateChips[1]);
+  setAllText("#portfolio .template-church .template-service-row i", copy.templateChips[2]);
   setText("#case .eyebrow", copy.caseBadge);
   setText("#case .case-heading h2", copy.caseTitle);
   setText("#case .case-heading > p:not(.eyebrow)", copy.caseText);
@@ -626,5 +650,22 @@ quoteForm?.addEventListener("submit", (event) => {
   window.open(instagramDirect, "_blank", "noopener,noreferrer");
 });
 
-applyTheme(localStorage.getItem(storageKeys.theme) || "dark");
-applyLanguage(localStorage.getItem(storageKeys.lang) || "pt");
+const urlPreferences = new URLSearchParams(window.location.search);
+const requestedTheme = urlPreferences.get("theme");
+const requestedLang = urlPreferences.get("lang");
+const initialTheme = requestedTheme === "light" || requestedTheme === "dark"
+  ? requestedTheme
+  : localStorage.getItem(storageKeys.theme) || "dark";
+const initialLang = requestedLang === "en" || requestedLang === "pt"
+  ? requestedLang
+  : localStorage.getItem(storageKeys.lang) || "pt";
+
+applyTheme(initialTheme);
+applyLanguage(initialLang);
+
+const requestedSection = urlPreferences.get("section");
+if (requestedSection) {
+  window.requestAnimationFrame(() => {
+    document.querySelector(`#${CSS.escape(requestedSection)}`)?.scrollIntoView({ block: "start" });
+  });
+}
