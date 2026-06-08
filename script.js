@@ -73,11 +73,111 @@ const translations = {
     finalPrimary: "Quero sair das planilhas",
     finalSecondary: "Chamar no Instagram",
     footerRight: "Sites, sistemas e automações",
+    footerLegal: "Todos os direitos reservados.",
+    servicesCards: [
+      ["01", "Sites profissionais", "Para empresas que precisam parecer confiáveis e transformar visitantes em contatos.", "Resultado: presença digital clara, bonita e pronta para vender."],
+      ["02", "Landing pages", "Para campanhas, bio do Instagram, lançamentos e serviços com chamada direta.", "Resultado: página objetiva para gerar conversas e pedidos de orçamento."],
+      ["03", "ERPs personalizados", "Para negócios que precisam controlar estoque, pedidos, produção e relatórios.", "Resultado: operação mais organizada e menos dependente de improviso."],
+      ["04", "Automações", "Para empresas que repetem tarefas, copiam dados e perdem tempo em processos manuais.", "Resultado: menos retrabalho e mais velocidade na rotina."],
+      ["05", "Manutenção mensal", "Para quem já tem site ou sistema e precisa de ajustes, melhorias e acompanhamento.", "Resultado: evolução contínua sem deixar o projeto parado."],
+      ["06", "Consultoria empresarial", "Para quem sabe que a operação está confusa, mas ainda não sabe o que construir.", "Resultado: clareza sobre processos, prioridades e solução ideal."],
+    ],
+    trustCards: [
+      ["Diagnóstico antes do design", "A solução começa pelo entendimento da rotina, dos gargalos e do que realmente precisa melhorar."],
+      ["Visual com função", "A estética premium existe para gerar confiança, leitura rápida e mais clareza comercial."],
+      ["Projeto pronto para evoluir", "Sites e sistemas são organizados para receber novas páginas, módulos e melhorias com menos atrito."],
+    ],
+    processCards: [
+      ["01", "Você chama no Instagram", "A conversa começa com o contexto do negócio, o problema atual e o objetivo da solução."],
+      ["02", "Mapeamos o caminho", "Organizamos prioridades, páginas, módulos, fluxos e o que precisa ser entregue primeiro."],
+      ["03", "Construção e ajustes", "A solução é criada com visual profissional, estrutura clara e foco em uso real."],
+      ["04", "Entrega e evolução", "Depois da entrega, o projeto pode evoluir com novas telas, conteúdos ou automações."],
+    ],
+    audienceCards: ["Pequenas empresas", "Prestadores de serviço", "Construção civil", "Academias e Muay Thai", "Igrejas e comunidades", "Negócios presos em planilhas e WhatsApp"],
+    projectTags: [
+      "ERP personalizado · operação interna",
+      "SaaS · em desenvolvimento",
+      "Template de segmento · orçamento e obras",
+      "Template demonstrativo · captação fitness",
+      "Template demonstrativo · agenda e comunidade",
+    ],
+    projectTitles: ["ERP IMPPEL", "EntreosSalvos", "Template Construção Civil", "Template Academia", "Template Igreja"],
+    projectBadges: ["ERP IMPPEL", "Em desenvolvimento", "Construção", "Fitness", "Comunidade"],
+    projectDescriptions: [
+      "Sistema para centralizar processos, módulos e acompanhamento operacional.",
+      "Plataforma focada em hábitos, rotina, disciplina e desenvolvimento pessoal.",
+      "Site profissional para construtoras, empreiteiras e empresas de impermeabilização.",
+      "Site para academias, personal trainers e negócios fitness.",
+      "Site institucional para igrejas, eventos, ministérios e comunicação.",
+    ],
+    projectProblems: [
+      "Resolve: controles manuais, dados espalhados e falta de visão da operação.",
+      "Resolve: dificuldade de manter constância, acompanhar evolução e estruturar rotina.",
+      "Resolve: apresentação de serviços, obras, diferenciais e chamadas para orçamento.",
+      "Resolve: comunicação de planos, aulas, horários e captação de novos alunos.",
+      "Resolve: centralização de eventos, ministérios, mensagens e canais de contato.",
+    ],
+    projectDetails: [
+      "Status: em uso interno · Tecnologias: React, TypeScript, Node.js",
+      "Status: em desenvolvimento · Categoria: SaaS · Tecnologias: React, Node.js",
+      "Status: template demonstrativo · Público: construção civil",
+      "Status: template demonstrativo · Público: academias e fitness",
+      "Status: template demonstrativo · Público: igrejas e comunidades",
+    ],
+    projectDirectCtas: ["Chamar no Direct", "Chamar no Direct", "Chamar no Direct", "Chamar no Direct"],
+    caseFlowBadge: "Fluxo operacional",
+    caseFlowTitle: "Da entrada do pedido ao acompanhamento.",
+    caseFlowText: "O ERP foi pensado para conectar etapas que antes ficavam separadas. A empresa passa a ter um caminho mais claro para registrar, acompanhar e consultar informações.",
+    caseCaption: "Sistema completo para gestão de obras, materiais, estoque, clientes, financeiro e pós-venda.",
+    caseGrid: [
+      ["01", "Problema", "Informações espalhadas, controles manuais e baixa visibilidade sobre etapas internas."],
+      ["02", "Solução", "ERP sob medida com fluxos conectados, módulos objetivos e navegação simples."],
+      ["03", "Módulos", "Mais de 7 módulos conectando CRM, orçamentos, OS, materiais, estoque, garantia e financeiro."],
+      ["04", "Resultado", "Mais controle, menos retrabalho e uma operação preparada para crescer com organização."],
+    ],
+    timelineItems: ["CRM", "Orçamento", "OS", "Materiais", "Estoque", "Garantia", "Financeiro"],
+    caseProof: [
+      ["Tecnologias", "React, TypeScript, Node.js, rotas internas, componentes reutilizáveis e estrutura modular."],
+      ["Integrações", "CRM, orçamento, OS, materiais, estoque, garantia e financeiro trabalhando em fluxo conectado."],
+      ["Maturidade", "Projeto pensado para operação real, evolução contínua e inclusão de novos módulos."],
+    ],
+    resultItems: ["Centralização de processos", "Redução de planilhas", "Controle de estoque integrado", "Fluxo operacional conectado", "Histórico rastreável"],
+    developmentStatus: "Status: Em desenvolvimento",
+    developmentPreviewLabel: "Prévias reais do EntreosSalvos",
+    testimonials: [
+      "“O sistema ficou muito mais fácil de usar do que eu imaginava. Conseguimos organizar clientes, materiais e serviços em um só lugar.”",
+      "“Todas as alterações que pedi foram feitas rapidamente. O resultado ficou exatamente como eu precisava.”",
+      "“Gostei porque não entregaram apenas um site bonito. Entenderam o problema da empresa e resolveram.”",
+    ],
+    faqItems: [
+      ["Quanto custa um sistema?", "Depende dos módulos, integrações e nível de personalização. O orçamento começa depois de entender o problema."],
+      ["Quanto tempo leva?", "Sites e landing pages tendem a ser mais rápidos. Sistemas e ERPs exigem planejamento por etapas."],
+      ["Você faz manutenção?", "Sim. É possível combinar ajustes, melhorias e acompanhamento mensal após a entrega."],
+      ["Posso pedir novas funções?", "Sim. A ideia é que o sistema possa evoluir com novos módulos, regras e fluxos conforme a empresa cresce."],
+      ["O sistema é personalizado?", "Sim. O desenvolvimento é pensado para a rotina do negócio, evitando soluções genéricas que não encaixam na operação."],
+    ],
+    quoteLabels: ["Nome", "Empresa", "Segmento", "O que precisa", "Orçamento aproximado"],
+    quotePlaceholders: ["Ex.: construção civil, academia, igreja", "Site, ERP, automação, landing page..."],
+    quoteOptions: ["Ainda não defini", "Até R$ 1.000", "R$ 1.000 a R$ 3.000", "R$ 3.000 a R$ 7.000", "Acima de R$ 7.000"],
+    contactSecondary: "Quero um sistema para meu negócio",
+    contactTertiary: "Chamar no Instagram",
     erpPageBadge: "Case ERP personalizado",
     erpPageTitle: "ERP IMPPEL operação conectada",
     erpPageText: "Sistema criado para centralizar processos internos, reduzir dependência de planilhas e conectar setores em um fluxo operacional mais claro.",
     erpPageCta: "Quero um ERP parecido",
     erpSecondary: "Chamar no Instagram",
+    erpOtherProjects: "Ver outros projetos",
+    erpFooterRight: "Case ERP IMPPEL",
+    erpGalleryLabel: "Galeria de telas reais do ERP IMPPEL",
+    erpGalleryCaptions: ["Login seguro", "Estoque integrado", "Orçamentos e clientes"],
+    erpDetailCards: [
+      ["Antes", "Problema", "Processos distribuídos, controles manuais e dificuldade de acompanhar histórico e etapas."],
+      ["Depois", "Solução", "ERP personalizado com módulos conectados, navegação objetiva e fluxo operacional rastreável."],
+      ["Módulos", "Principais áreas", "CRM, orçamento, OS, materiais, estoque, garantia, financeiro, relatórios e acompanhamento."],
+      ["Resultado", "Operação", "Centralização de processos, redução de planilhas e mais clareza para decisões internas."],
+    ],
+    erpPageFinalBadge: "Próximo passo",
+    erpPageFinalTitle: "Quer um sistema para organizar sua empresa?",
     overviewTitle: "Visão geral",
     overviewText: "O ERP IMPPEL organiza uma operação com várias etapas internas, conectando atendimento, orçamento, execução, materiais, estoque, garantia e financeiro.",
     flowBadge: "Fluxo completo",
@@ -145,11 +245,111 @@ const translations = {
     finalPrimary: "Move out of spreadsheets",
     finalSecondary: "Message on Instagram",
     footerRight: "Websites, systems and automation",
+    footerLegal: "All rights reserved.",
+    servicesCards: [
+      ["01", "Professional websites", "For companies that need to look trustworthy and turn visitors into qualified contacts.", "Outcome: a clear, polished digital presence ready to sell."],
+      ["02", "Landing pages", "For campaigns, Instagram bios, launches and services with a direct call to action.", "Outcome: a focused page built to generate conversations and quote requests."],
+      ["03", "Custom ERPs", "For businesses that need to control inventory, orders, production and reports.", "Outcome: a more organized operation with less improvisation."],
+      ["04", "Automations", "For companies repeating tasks, copying data and losing time in manual processes.", "Outcome: less rework and more speed in daily operations."],
+      ["05", "Monthly maintenance", "For teams that already have a website or system and need adjustments, improvements and support.", "Outcome: continuous evolution without leaving the project idle."],
+      ["06", "Business consulting", "For companies that know the operation is messy but do not yet know what to build.", "Outcome: clarity around processes, priorities and the ideal solution."],
+    ],
+    trustCards: [
+      ["Diagnosis before design", "The solution starts by understanding the routine, the bottlenecks and what really needs to improve."],
+      ["Visuals with purpose", "The premium aesthetic exists to build trust, improve scanning and create clearer commercial communication."],
+      ["Ready to evolve", "Websites and systems are organized to receive new pages, modules and improvements with less friction."],
+    ],
+    processCards: [
+      ["01", "You message us on Instagram", "The conversation starts with business context, the current problem and the goal of the solution."],
+      ["02", "We map the path", "We organize priorities, pages, modules, flows and what needs to be delivered first."],
+      ["03", "Build and refine", "The solution is created with a professional visual system, clear structure and real-use focus."],
+      ["04", "Delivery and evolution", "After delivery, the project can evolve with new screens, content or automations."],
+    ],
+    audienceCards: ["Small businesses", "Service providers", "Construction companies", "Gyms and Muay Thai", "Churches and communities", "Businesses stuck in spreadsheets and WhatsApp"],
+    projectTags: [
+      "Custom ERP · internal operation",
+      "SaaS · in development",
+      "Industry template · quotes and construction",
+      "Demo template · fitness acquisition",
+      "Demo template · events and community",
+    ],
+    projectTitles: ["ERP IMPPEL", "EntreosSalvos", "Construction Template", "Gym Template", "Church Template"],
+    projectBadges: ["ERP IMPPEL", "In development", "Construction", "Fitness", "Community"],
+    projectDescriptions: [
+      "System to centralize processes, modules and operational tracking.",
+      "Platform focused on habits, routine, discipline and personal development.",
+      "Professional website for builders, contractors and waterproofing companies.",
+      "Website for gyms, personal trainers and fitness businesses.",
+      "Institutional website for churches, events, ministries and communication.",
+    ],
+    projectProblems: [
+      "Solves: manual controls, scattered data and lack of operational visibility.",
+      "Solves: difficulty staying consistent, tracking progress and structuring a routine.",
+      "Solves: presenting services, projects, differentiators and quote calls.",
+      "Solves: communicating plans, classes, schedules and attracting new students.",
+      "Solves: centralizing events, ministries, messages and contact channels.",
+    ],
+    projectDetails: [
+      "Status: in internal use · Technologies: React, TypeScript, Node.js",
+      "Status: in development · Category: SaaS · Technologies: React, Node.js",
+      "Status: demo template · Audience: construction",
+      "Status: demo template · Audience: gyms and fitness",
+      "Status: demo template · Audience: churches and communities",
+    ],
+    projectDirectCtas: ["Message on Instagram", "Message on Instagram", "Message on Instagram", "Message on Instagram"],
+    caseFlowBadge: "Operational flow",
+    caseFlowTitle: "From incoming request to tracking.",
+    caseFlowText: "The ERP was designed to connect steps that used to live apart. The company gains a clearer path to register, monitor and retrieve information.",
+    caseCaption: "Complete system for managing projects, materials, inventory, clients, finance and after-sales.",
+    caseGrid: [
+      ["01", "Problem", "Scattered information, manual controls and low visibility across internal stages."],
+      ["02", "Solution", "Custom ERP with connected flows, focused modules and simple navigation."],
+      ["03", "Modules", "More than 7 modules connecting CRM, quotes, work orders, materials, inventory, warranty and finance."],
+      ["04", "Result", "More control, less rework and an operation prepared to grow with organization."],
+    ],
+    timelineItems: ["CRM", "Quotes", "Work orders", "Materials", "Inventory", "Warranty", "Finance"],
+    caseProof: [
+      ["Technologies", "React, TypeScript, Node.js, internal routes, reusable components and modular structure."],
+      ["Integrations", "CRM, quotes, work orders, materials, inventory, warranty and finance working in one connected flow."],
+      ["Maturity", "Project designed for a real operation, continuous evolution and new modules."],
+    ],
+    resultItems: ["Process centralization", "Spreadsheet reduction", "Integrated inventory control", "Connected operational flow", "Traceable history"],
+    developmentStatus: "Status: In development",
+    developmentPreviewLabel: "Real EntreosSalvos previews",
+    testimonials: [
+      "“The system became much easier to use than I expected. We organized clients, materials and services in one place.”",
+      "“Every change I requested was handled quickly. The result matched exactly what I needed.”",
+      "“I liked that it was not just a beautiful website. They understood the company problem and solved it.”",
+    ],
+    faqItems: [
+      ["How much does a system cost?", "It depends on modules, integrations and the level of customization. The quote starts after understanding the problem."],
+      ["How long does it take?", "Websites and landing pages are usually faster. Systems and ERPs require staged planning."],
+      ["Do you provide maintenance?", "Yes. Adjustments, improvements and monthly support can be arranged after delivery."],
+      ["Can I request new features?", "Yes. The idea is that the system can evolve with new modules, rules and flows as the company grows."],
+      ["Is the system customized?", "Yes. Development is designed around the business routine, avoiding generic solutions that do not fit the operation."],
+    ],
+    quoteLabels: ["Name", "Company", "Industry", "What do you need?", "Approximate budget"],
+    quotePlaceholders: ["Ex.: construction, gym, church", "Website, ERP, automation, landing page..."],
+    quoteOptions: ["Not defined yet", "Up to R$ 1,000", "R$ 1,000 to R$ 3,000", "R$ 3,000 to R$ 7,000", "Above R$ 7,000"],
+    contactSecondary: "I want a system for my business",
+    contactTertiary: "Message on Instagram",
     erpPageBadge: "Custom ERP case",
     erpPageTitle: "ERP IMPPEL connected operation",
     erpPageText: "A system created to centralize internal processes, reduce spreadsheet dependency and connect departments in a clearer operational flow.",
     erpPageCta: "I want a similar ERP",
     erpSecondary: "Message on Instagram",
+    erpOtherProjects: "View other projects",
+    erpFooterRight: "ERP IMPPEL case",
+    erpGalleryLabel: "Real ERP IMPPEL screen gallery",
+    erpGalleryCaptions: ["Secure login", "Integrated inventory", "Quotes and clients"],
+    erpDetailCards: [
+      ["Before", "Problem", "Distributed processes, manual controls and difficulty tracking history and stages."],
+      ["After", "Solution", "Custom ERP with connected modules, objective navigation and traceable operational flow."],
+      ["Modules", "Main areas", "CRM, quotes, work orders, materials, inventory, warranty, finance, reports and tracking."],
+      ["Result", "Operation", "Process centralization, spreadsheet reduction and more clarity for internal decisions."],
+    ],
+    erpPageFinalBadge: "Next step",
+    erpPageFinalTitle: "Want a system to organize your company?",
     overviewTitle: "Overview",
     overviewText: "ERP IMPPEL organizes an operation with multiple internal stages, connecting service, budget, execution, materials, inventory, warranty and finance.",
     flowBadge: "Complete flow",
@@ -167,6 +367,50 @@ const setAllText = (selector, values, root = document) => {
   const elements = [...root.querySelectorAll(selector)];
   elements.forEach((element, index) => {
     if (values[index]) element.textContent = values[index];
+  });
+};
+
+const setAttribute = (selector, attribute, value, root = document) => {
+  const element = root.querySelector(selector);
+  if (element && value) element.setAttribute(attribute, value);
+};
+
+const setAllAttribute = (selector, attribute, values, root = document) => {
+  const elements = [...root.querySelectorAll(selector)];
+  elements.forEach((element, index) => {
+    if (values[index]) element.setAttribute(attribute, values[index]);
+  });
+};
+
+const setCards = (selector, rows, parts) => {
+  const cards = [...document.querySelectorAll(selector)];
+  cards.forEach((card, index) => {
+    const row = rows[index];
+    if (!row) return;
+    parts.forEach((part, partIndex) => {
+      const element = card.querySelector(part);
+      if (element && row[partIndex]) element.textContent = row[partIndex];
+    });
+  });
+};
+
+const setLabelTexts = (selector, values) => {
+  const labels = [...document.querySelectorAll(selector)];
+  labels.forEach((label, index) => {
+    const value = values[index];
+    if (!value) return;
+    const textNode = [...label.childNodes].find((node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim());
+    if (textNode) textNode.textContent = `\n              ${value}\n              `;
+  });
+};
+
+const setOptions = (selector, values) => {
+  const options = [...document.querySelectorAll(selector)];
+  options.forEach((option, index) => {
+    const value = values[index];
+    if (!value) return;
+    option.textContent = value;
+    option.value = value;
   });
 };
 
@@ -203,27 +447,45 @@ const applyLanguage = (lang) => {
   setText("#servicos .section-kicker p", copy.servicesKicker);
   setText("#servicos .section-heading h2", copy.servicesTitle);
   setText("#servicos .section-heading p", copy.servicesText);
+  setCards("#servicos .service-card", copy.servicesCards, ["span", "h3", "p", "small"]);
   setText("#diferenciais .section-kicker p", copy.trustKicker);
   setText("#diferenciais .section-heading h2", copy.trustTitle);
   setText("#diferenciais .section-heading p", copy.trustText);
+  setCards("#diferenciais .trust-card", copy.trustCards, ["h3", "p"]);
   setText("#processo .section-kicker p", copy.processKicker);
   setText("#processo .section-heading h2", copy.processTitle);
   setText("#processo .section-heading p", copy.processText);
+  setCards("#processo .process-card", copy.processCards, ["span", "h3", "p"]);
   setText("#para-quem .section-kicker p", copy.audienceKicker);
   setText("#para-quem .section-heading h2", copy.audienceTitle);
   setText("#para-quem .section-heading p", copy.audienceText);
+  setAllText("#para-quem .audience-card", copy.audienceCards);
   setText("#portfolio .section-kicker p", copy.portfolioKicker);
   setText("#portfolio .work-heading h2", copy.portfolioTitle);
   setText("#portfolio .work-heading p", copy.portfolioText);
+  setAllText("#portfolio .project-media > span", copy.projectBadges);
+  setAllText("#portfolio .project-meta > p:first-child", copy.projectTags);
+  setAllText("#portfolio .project-meta h3", copy.projectTitles);
+  setAllText("#portfolio .project-desc", copy.projectDescriptions);
+  setAllText("#portfolio .project-problem", copy.projectProblems);
+  setAllText("#portfolio .project-details", copy.projectDetails);
   setText(".media-imppel + .project-meta a", copy.erpCardCta);
-  setAllText("#portfolio .project-meta a[target]", [copy.directCta, copy.directCta, copy.directCta, copy.directCta]);
+  setAllText("#portfolio .project-meta a[target]", copy.projectDirectCtas);
   setText("#case .eyebrow", copy.caseBadge);
   setText("#case .case-heading h2", copy.caseTitle);
   setText("#case .case-heading > p:not(.eyebrow)", copy.caseText);
+  setText("#case .case-gallery-main figcaption", copy.caseCaption);
+  setCards("#case .case-grid article", copy.caseGrid, ["span", "h3", "p"]);
+  setText("#case .case-flow-copy .eyebrow", copy.caseFlowBadge);
+  setText("#case .case-flow-copy h3", copy.caseFlowTitle);
+  setText("#case .case-flow-copy p:not(.eyebrow)", copy.caseFlowText);
+  setAllText("#case .timeline-list li", copy.timelineItems);
+  setCards("#case .case-proof article", copy.caseProof, ["span", "p"]);
   setText("#case .case-cta .button", copy.caseCta);
   setText("#resultados .section-kicker p", copy.resultsKicker);
   setText("#resultados .section-heading h2", copy.resultsTitle);
   setText("#resultados .section-heading p", copy.resultsText);
+  setAllText("#resultados .result-card", copy.resultItems);
   setText("#sobre .section-kicker p", copy.aboutKicker);
   setText("#sobre .about-copy h2", copy.aboutTitle);
   setText("#sobre .about-copy p", copy.aboutText);
@@ -231,31 +493,51 @@ const applyLanguage = (lang) => {
   setText(".founder-copy .eyebrow", copy.founderBadge);
   setAllText(".founder-copy > p:not(.eyebrow)", [copy.founderText1, copy.founderText2]);
   setText("#em-desenvolvimento .section-kicker p", copy.developmentKicker);
+  setText("#em-desenvolvimento .development-card > span", copy.developmentStatus);
   setText("#em-desenvolvimento h2", copy.developmentTitle);
   setText("#em-desenvolvimento .development-card p", copy.developmentText);
+  setAttribute("#em-desenvolvimento .development-preview", "aria-label", copy.developmentPreviewLabel);
   setText("#feedbacks .section-kicker p", copy.feedbackKicker);
   setText("#feedbacks .section-heading h2", copy.feedbackTitle);
   setText("#feedbacks .section-heading p", copy.feedbackText);
+  setAllText("#feedbacks .testimonial-card p", copy.testimonials);
   setText("#faq .section-kicker p", copy.faqKicker);
+  setCards("#faq .faq-item", copy.faqItems, ["h3", "p"]);
   setText("#orcamento .section-kicker p", copy.quoteKicker);
   setText("#orcamento .section-heading h2", copy.quoteTitle);
   setText("#orcamento .section-heading p", copy.quoteText);
+  setLabelTexts("#quoteForm label", copy.quoteLabels);
+  setAttribute('#quoteForm input[name="segmento"]', "placeholder", copy.quotePlaceholders[0]);
+  setAttribute('#quoteForm textarea[name="necessidade"]', "placeholder", copy.quotePlaceholders[1]);
+  setOptions("#quoteForm option", copy.quoteOptions);
   setText("#quoteForm button", copy.quoteButton);
   setText("#contato .eyebrow", copy.finalBadge);
   setText("#contato h2", copy.finalTitle);
   setText("#contato .button.primary", copy.finalPrimary);
-  setText("#contato .button.secondary", copy.finalSecondary);
-  setText(".site-footer span:last-child", copy.footerRight);
+  setAllText("#contato .button.secondary", [copy.contactSecondary, copy.contactTertiary]);
+  if (document.querySelector(".case-page-hero")) {
+    setText(".site-footer span:last-child", copy.erpFooterRight);
+  } else {
+    setText(".site-footer span:last-child", `© ${new Date().getFullYear()} ${copy.footerLegal}`);
+  }
   setText(".case-page-copy .eyebrow", copy.erpPageBadge);
   setText(".case-page-copy h1", copy.erpPageTitle);
   setText(".case-page-copy > p:not(.eyebrow)", copy.erpPageText);
   setText(".case-page-copy .button.primary", copy.erpPageCta);
-  setText(".final-cta .button.secondary", copy.erpSecondary);
+  setAttribute(".case-real-gallery", "aria-label", copy.erpGalleryLabel);
+  setAllText(".case-real-gallery figcaption", copy.erpGalleryCaptions);
+  setCards("main > .case-detail-section .case-grid article", copy.erpDetailCards, ["span", "h3", "p"]);
+  setText(".final-cta:not(#contato) .eyebrow", copy.erpPageFinalBadge);
+  setText(".final-cta:not(#contato) h2", copy.erpPageFinalTitle);
+  setText(".final-cta:not(#contato) .button.primary", copy.erpSecondary);
+  setText(".final-cta:not(#contato) .button.secondary", copy.erpOtherProjects);
   setText(".case-detail-section .section-heading h2", copy.overviewTitle);
   setText(".case-detail-section .section-heading p", copy.overviewText);
-  setText(".case-flow-copy .eyebrow", copy.flowBadge);
-  setText(".case-flow-copy h3", copy.flowTitle);
-  setText(".case-flow-copy p:not(.eyebrow)", copy.flowText);
+  setText(".case-detail-section .case-flow-copy .eyebrow", copy.flowBadge);
+  setText(".case-detail-section .case-flow-copy h3", copy.flowTitle);
+  setText(".case-detail-section .case-flow-copy p:not(.eyebrow)", copy.flowText);
+  setAllText(".case-detail-section .timeline-list li", copy.timelineItems);
+  setCards(".case-detail-section .case-proof article", copy.caseProof, ["span", "p"]);
 
   langButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.langOption === lang);
