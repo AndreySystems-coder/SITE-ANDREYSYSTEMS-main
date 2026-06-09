@@ -5348,3 +5348,236 @@ body {
     justify-self: center;
   }
 }
+
+/* Layout correction sprint: compact spacing, balanced grids and aligned portfolio cards. */
+.tech-hero {
+  display: grid;
+  min-height: auto;
+  padding: clamp(92px, 10vw, 118px) 0 clamp(18px, 3vw, 32px);
+  align-items: start;
+}
+
+.hero-frame {
+  min-height: auto;
+  padding: clamp(58px, 8vw, 84px) clamp(20px, 6vw, 72px) clamp(92px, 10vw, 124px);
+}
+
+.hero-footer {
+  right: clamp(18px, 5vw, 74px);
+  bottom: clamp(20px, 3vw, 34px);
+  left: clamp(18px, 5vw, 74px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hero-footer span {
+  flex: 0 1 auto;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.section {
+  padding-top: clamp(56px, 7vw, 86px);
+  padding-bottom: clamp(56px, 7vw, 86px);
+}
+
+.section-heading {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.52fr);
+  align-items: center;
+}
+
+.trust .section-heading p {
+  align-self: stretch;
+  display: grid;
+  align-content: center;
+  margin: 0;
+}
+
+.trust-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.trust-card {
+  min-height: 198px;
+}
+
+.portfolio .work-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.portfolio .project-card,
+.portfolio .project-large {
+  grid-column: auto;
+  grid-row: auto;
+  display: grid;
+  grid-template-rows: clamp(230px, 22vw, 300px) 1fr;
+  height: 100%;
+  min-height: 620px;
+}
+
+.portfolio .project-media,
+.portfolio .project-large .project-media {
+  height: auto;
+  min-height: 0;
+}
+
+.portfolio .project-meta {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.portfolio .project-meta a {
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.portfolio .template-preview,
+.portfolio .template-preview.template-fitness,
+.portfolio .template-preview.template-church {
+  width: min(84%, 360px);
+}
+
+.portfolio .template-service-row,
+.portfolio .template-plan-grid {
+  grid-template-columns: repeat(auto-fit, minmax(74px, 1fr));
+}
+
+.development-card {
+  width: min(920px, 100%);
+  margin-inline: auto;
+}
+
+.development-preview {
+  grid-auto-columns: minmax(300px, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: none;
+  overflow-x: visible;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.development-preview img {
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  max-height: none;
+  aspect-ratio: 16 / 9;
+}
+
+.faq-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.faq-item {
+  grid-column: span 3;
+}
+
+.faq-item:last-child {
+  grid-column: 2 / span 4;
+}
+
+@media (max-width: 1020px) {
+  .portfolio .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio .project-card,
+  .portfolio .project-large {
+    min-height: 590px;
+  }
+
+  .portfolio .project-card:last-child {
+    grid-column: 1 / -1;
+    width: min(520px, 100%);
+    justify-self: center;
+  }
+
+  .faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .faq-item,
+  .faq-item:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-frame {
+    padding-bottom: clamp(112px, 18vw, 148px);
+  }
+
+  .section-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .development-preview {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+}
+
+@media (max-width: 620px) {
+  .tech-hero {
+    padding-top: 84px;
+    padding-bottom: 18px;
+  }
+
+  .hero-frame {
+    min-height: auto;
+    padding: 58px 18px 46px;
+  }
+
+  .hero-footer {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(343px, calc(100% - 32px));
+    margin: 10px auto 0;
+    gap: 6px;
+  }
+
+  .hero-footer span,
+  .hero-footer span:last-child {
+    width: 100%;
+    min-height: 30px;
+    justify-self: stretch;
+    font-size: 0.48rem;
+    line-height: 1.12;
+    white-space: normal;
+  }
+
+  .hero-footer span:last-child {
+    grid-column: 1 / -1;
+    width: min(230px, 100%);
+    justify-self: center;
+  }
+
+  .trust-grid,
+  .portfolio .work-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio .project-card,
+  .portfolio .project-large {
+    grid-template-rows: 220px 1fr;
+    min-height: 540px;
+  }
+
+  .portfolio .project-card:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+}
