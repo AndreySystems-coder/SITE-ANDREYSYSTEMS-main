@@ -5,7 +5,7 @@ const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 const langButtons = document.querySelectorAll("[data-lang-option]");
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const quoteForm = document.querySelector("#quoteForm");
-const instagramDirect = "https://www.instagram.com/direct/t/andrey.pradilosilva";
+const instagramDirect = "https://www.instagram.com/direct/t/andreyfabricio_";
 const storageKeys = {
   lang: "andreySystemsLang",
   theme: "andreySystemsTheme",
@@ -69,6 +69,7 @@ const translations = {
     quoteTitle: "Conte rapidamente o que você precisa.",
     quoteText: "Preencha as informações principais e continue a conversa no Instagram.",
     quoteButton: "Continuar no Instagram",
+    quoteEmailButton: "Enviar e-mail / solicitar orçamento",
     finalBadge: "Contato",
     finalTitle: "Vamos organizar sua empresa com tecnologia?",
     finalPrimary: "Quero sair das planilhas",
@@ -252,6 +253,7 @@ const translations = {
     quoteTitle: "Tell us what you need.",
     quoteText: "Fill in the main details and continue the conversation on Instagram.",
     quoteButton: "Continue on Instagram",
+    quoteEmailButton: "Send email / request a quote",
     finalBadge: "Contact",
     finalTitle: "Let’s organize your company with technology.",
     finalPrimary: "Move out of spreadsheets",
@@ -538,6 +540,7 @@ const applyLanguage = (lang) => {
   setAttribute('#quoteForm textarea[name="necessidade"]', "placeholder", copy.quotePlaceholders[1]);
   setOptions("#quoteForm option", copy.quoteOptions);
   setText("#quoteForm button", copy.quoteButton);
+  setText("#quoteForm .quote-email-link", copy.quoteEmailButton);
   setText("#contato .eyebrow", copy.finalBadge);
   setText("#contato h2", copy.finalTitle);
   setText("#contato .button.primary", copy.finalPrimary);

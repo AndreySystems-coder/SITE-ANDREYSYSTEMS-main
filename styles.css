@@ -5581,3 +5581,127 @@ body {
     width: 100%;
   }
 }
+
+/* Final cleanup sprint: integrated hero chips, cleaner side copy and 2+3 project pyramid. */
+.hero-frame {
+  padding-bottom: clamp(132px, 13vw, 160px);
+}
+
+.hero-footer {
+  bottom: clamp(42px, 5vw, 64px);
+  gap: 9px;
+}
+
+.hero-footer span {
+  min-height: 30px;
+  padding-inline: 12px;
+  border-color: rgba(216, 193, 161, 0.12);
+  background: rgba(5, 7, 11, 0.28);
+}
+
+.trust .section-heading p,
+.audience .section-heading p,
+[data-theme="light"] .trust .section-heading p,
+[data-theme="light"] .audience .section-heading p {
+  max-width: 440px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.portfolio .work-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.portfolio .project-card,
+.portfolio .project-large {
+  grid-template-rows: clamp(240px, 21vw, 310px) 1fr;
+  min-height: 610px;
+}
+
+.portfolio .project-card:nth-child(-n + 2) {
+  grid-column: span 3;
+  min-height: 640px;
+}
+
+.portfolio .project-card:nth-child(n + 3) {
+  grid-column: span 2;
+}
+
+.portfolio .project-meta {
+  gap: 8px;
+}
+
+.portfolio .project-desc,
+.portfolio .project-problem {
+  margin-bottom: 0;
+}
+
+.portfolio .project-meta > p:first-child {
+  margin-bottom: 0;
+}
+
+.quote-form .quote-email-link {
+  grid-column: span 2;
+  justify-content: center;
+}
+
+@media (max-width: 1020px) {
+  .portfolio .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio .project-card:nth-child(-n + 2),
+  .portfolio .project-card:nth-child(n + 3) {
+    grid-column: auto;
+  }
+
+  .portfolio .project-card:last-child {
+    grid-column: 1 / -1;
+    width: min(520px, 100%);
+    justify-self: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-frame {
+    padding-bottom: clamp(118px, 18vw, 150px);
+  }
+
+  .trust .section-heading p,
+  .audience .section-heading p {
+    max-width: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-frame {
+    padding-bottom: 44px;
+  }
+
+  .hero-footer {
+    margin-top: -8px;
+  }
+
+  .portfolio .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio .project-card,
+  .portfolio .project-large,
+  .portfolio .project-card:nth-child(-n + 2),
+  .portfolio .project-card:nth-child(n + 3) {
+    grid-column: auto;
+    min-height: 540px;
+  }
+
+  .portfolio .project-card:last-child {
+    width: 100%;
+  }
+
+  .quote-form .quote-email-link {
+    grid-column: 1 / -1;
+  }
+}
