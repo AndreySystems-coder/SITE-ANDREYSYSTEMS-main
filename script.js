@@ -26,6 +26,7 @@ const translations = {
     heroText: "Criamos sites, sistemas e automações para empresas que querem sair das planilhas, organizar processos e vender com mais clareza.",
     heroPrimary: "Quero organizar minha empresa",
     heroSecondary: "Ver projetos",
+    heroChips: ["Websites", "Sistemas sob medida", "ERP Empresarial", "Automação de Processos", "Consultoria Operacional"],
     servicesKicker: "Serviços",
     servicesTitle: "Sites, sistemas e automações para organizar seu negócio.",
     servicesText: "Soluções práticas para empresas que ainda dependem de planilhas, WhatsApp solto e controles manuais.",
@@ -210,6 +211,7 @@ const translations = {
     heroText: "We build websites, systems and automations for companies ready to leave spreadsheets behind, organize processes and sell with more clarity.",
     heroPrimary: "Organize my company",
     heroSecondary: "View projects",
+    heroChips: ["Websites", "Custom Software", "Business ERP", "Process Automation", "Operational Consulting"],
     servicesKicker: "Services",
     servicesTitle: "Websites, systems and automation to organize your business.",
     servicesText: "Practical solutions for companies still relying on spreadsheets, scattered WhatsApp messages and manual controls.",
@@ -468,6 +470,7 @@ const applyLanguage = (lang) => {
   setText(".hero-content > p:not(.eyebrow)", copy.heroText);
   setText(".hero-actions .button.primary", copy.heroPrimary);
   setText(".hero-actions .button.secondary", copy.heroSecondary);
+  setAllText(".hero-footer span", copy.heroChips);
   setText("#servicos .section-kicker p", copy.servicesKicker);
   setText("#servicos .section-heading h2", copy.servicesTitle);
   setText("#servicos .section-heading p", copy.servicesText);
