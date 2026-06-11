@@ -86,9 +86,12 @@ const translations = {
       ["06", "Consultoria empresarial", "Para quem sabe que a operação está confusa, mas ainda não sabe o que construir.", "Resultado: clareza sobre processos, prioridades e solução ideal."],
     ],
     trustCards: [
-      ["Diagnóstico antes do design", "A solução começa pelo entendimento da rotina, dos gargalos e do que realmente precisa melhorar."],
-      ["Visual com função", "A estética premium existe para gerar confiança, leitura rápida e mais clareza comercial."],
-      ["Projeto pronto para evoluir", "Sites e sistemas são organizados para receber novas páginas, módulos e melhorias com menos atrito."],
+      ["Soluções personalizadas", "Cada projeto nasce do problema real da empresa, sem encaixar o negócio em um modelo pronto."],
+      ["Problemas reais", "O desenvolvimento prioriza organização, clareza operacional e melhorias que fazem diferença na rotina."],
+      ["ERP em ambiente real", "O ERP IMPPEL demonstra experiência prática com módulos, fluxos e necessidades de uma operação em uso."],
+      ["Setores integrados", "CRM, orçamento, estoque, financeiro e pós-venda podem conversar dentro do mesmo fluxo."],
+      ["Pós-entrega", "O projeto continua acompanhado para ajustes, evolução e correções conforme o uso real aparece."],
+      ["Evolução contínua", "Sites e sistemas são pensados para receber novas páginas, módulos e automações com menos atrito."],
     ],
     processCards: [
       ["01", "Você chama no Instagram", "A conversa começa com o contexto do negócio, o problema atual e o objetivo da solução."],
@@ -271,9 +274,12 @@ const translations = {
       ["06", "Business consulting", "For companies that know the operation is messy but do not yet know what to build.", "Outcome: clarity around processes, priorities and the ideal solution."],
     ],
     trustCards: [
-      ["Diagnosis before design", "The solution starts by understanding the routine, the bottlenecks and what really needs to improve."],
-      ["Visuals with purpose", "The premium aesthetic exists to build trust, improve scanning and create clearer commercial communication."],
-      ["Ready to evolve", "Websites and systems are organized to receive new pages, modules and improvements with less friction."],
+      ["Custom solutions", "Each project starts from the company’s real problem instead of forcing the business into a ready-made model."],
+      ["Real problem focus", "Development prioritizes organization, operational clarity and improvements that matter in daily work."],
+      ["ERP used in a real environment", "ERP IMPPEL shows practical experience with modules, flows and the needs of an active operation."],
+      ["Connected departments", "CRM, quotes, inventory, finance and after-sales can work together inside the same flow."],
+      ["Post-delivery support", "The project stays supported for adjustments, evolution and fixes as real usage reveals new needs."],
+      ["Continuous evolution", "Websites and systems are planned to receive new pages, modules and automations with less friction."],
     ],
     processCards: [
       ["01", "You message us on Instagram", "The conversation starts with business context, the current problem and the goal of the solution."],
