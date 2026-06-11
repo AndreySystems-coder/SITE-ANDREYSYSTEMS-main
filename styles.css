@@ -6059,3 +6059,95 @@ body {
     padding-top: 68px !important;
   }
 }
+
+/* Final container refinement: remove oversized section panels while preserving inner cards. */
+.hero-frame,
+[data-theme="light"] .hero-frame {
+  border-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.hero-frame::before,
+.hero-frame::after {
+  content: none !important;
+  display: none !important;
+}
+
+.tech-hero .hero-frame {
+  width: min(1060px, calc(100% - 36px)) !important;
+}
+
+.testimonials,
+.faq,
+.quote {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.testimonials .section-heading,
+.faq .section-heading,
+.quote .section-heading {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.testimonials .section-heading p,
+.faq .section-heading p,
+.quote .section-heading p {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.faq-grid {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.quote-form {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.032), rgba(255, 255, 255, 0.012)) !important;
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.24) !important;
+}
+
+.final-cta {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.final-cta::before,
+.final-cta::after {
+  opacity: 0.55 !important;
+}
+
+[data-theme="light"] .testimonials .section-heading,
+[data-theme="light"] .faq .section-heading,
+[data-theme="light"] .quote .section-heading,
+[data-theme="light"] .testimonials .section-heading p,
+[data-theme="light"] .faq .section-heading p,
+[data-theme="light"] .quote .section-heading p,
+[data-theme="light"] .faq-grid,
+[data-theme="light"] .final-cta {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+[data-theme="light"] .quote-form {
+  background: rgba(255, 255, 255, 0.48) !important;
+  box-shadow: 0 18px 58px rgba(41, 66, 94, 0.08) !important;
+}
+
+@media (max-width: 620px) {
+  .tech-hero .hero-frame {
+    width: min(100%, calc(100vw - 24px)) !important;
+  }
+
+  .quote-form,
+  [data-theme="light"] .quote-form {
+    box-shadow: none !important;
+  }
+}
