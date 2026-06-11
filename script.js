@@ -6,6 +6,11 @@ const langButtons = document.querySelectorAll("[data-lang-option]");
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const quoteForm = document.querySelector("#quoteForm");
 const instagramDirect = "https://www.instagram.com/direct/t/andreyfabricio_";
+const quoteEmail = "orcamento@andrey.systems"; // Trocar se o e-mail oficial de orçamento mudar.
+const quoteEmailLink = document.querySelector("#quoteEmailLink");
+const quoteMessage = document.querySelector("#quoteMessage");
+const quoteMessageText = document.querySelector("#quoteMessageText");
+const quoteCopyButton = document.querySelector("#quoteCopyButton");
 const storageKeys = {
   lang: "andreySystemsLang",
   theme: "andreySystemsTheme",
@@ -24,8 +29,10 @@ const translations = {
     heroBadge: "Software sob medida",
     heroTitle: "Sites, ERPs e automações para empresas que querem crescer",
     heroText: "Criamos sites, sistemas e automações para empresas que querem sair das planilhas, organizar processos e vender com mais clareza.",
-    heroPrimary: "Quero organizar minha empresa",
-    heroSecondary: "Ver projetos",
+    heroPrimary: "Chamar no Instagram",
+    heroSecondary: "Solicitar orçamento",
+    heroProofTitle: "Projeto real desenvolvido para a IMPPEL",
+    heroProofText: "ERP com CRM, orçamentos, ordens de serviço, materiais, estoque, financeiro, garantias, permissões por cargo e backup.",
     heroChips: ["Websites", "Sistemas sob medida", "ERP Empresarial", "Automação de Processos", "Consultoria Operacional"],
     servicesKicker: "Serviços",
     servicesTitle: "Sites, sistemas e automações para organizar seu negócio.",
@@ -46,8 +53,8 @@ const translations = {
     directCta: "Chamar no Instagram",
     caseBadge: "Case principal",
     caseTitle: "ERP IMPPEL",
-    caseText: "Sistema criado para centralizar informações, organizar módulos internos e dar mais controle a uma operação que dependia de processos manuais.",
-    caseCta: "Quero um sistema parecido",
+    caseText: "O ERP IMPPEL foi desenvolvido para centralizar processos internos de uma empresa real: clientes, orçamentos, ordens de serviço, materiais, estoque, financeiro e pós-venda.",
+    caseCta: "Solicitar orçamento",
     resultsKicker: "Resultados",
     resultsTitle: "O resultado esperado é uma operação mais clara.",
     resultsText: "Sem promessas mágicas: o foco é reduzir bagunça, organizar dados e dar mais rastreabilidade para decisões.",
@@ -62,19 +69,33 @@ const translations = {
     developmentKicker: "Projetos em desenvolvimento",
     developmentTitle: "Entreosalvos",
     developmentText: "Aplicativo focado em crescimento pessoal, hábitos, desafios e evolução diária.",
-    feedbackKicker: "Feedbacks",
-    feedbackTitle: "Avaliações com linguagem simples e direta.",
-    feedbackText: "Relatos objetivos sobre organização, agilidade e entendimento do problema antes da entrega.",
+    feedbackKicker: "Evidências",
+    feedbackTitle: "Evidências do trabalho.",
+    feedbackText: "Provas honestas do que já foi construído, sem depoimentos genéricos ou promessas inventadas.",
     faqKicker: "Perguntas frequentes",
     quoteKicker: "Orçamento",
     quoteTitle: "Conte rapidamente o que você precisa.",
-    quoteText: "Preencha as informações principais e continue a conversa no Instagram.",
-    quoteButton: "Continuar no Instagram",
-    quoteEmailButton: "Enviar e-mail / solicitar orçamento",
+    quoteText: "Preencha as informações principais. O site monta uma mensagem pronta para você chamar no Instagram ou enviar por e-mail.",
+    quoteButton: "Chamar no Instagram",
+    quoteEmailButton: "Enviar por e-mail",
+    quoteMessageTitle: "Mensagem pronta para copiar",
+    quoteCopyButton: "Copiar mensagem",
+    quoteCopied: "Mensagem pronta copiada. Se o Direct não abrir com texto preenchido, cole a mensagem na conversa.",
+    quoteTemplate: ({ nome, empresa, contato, tipo, problema, prazo }) => `Olá, Andrey! Quero conversar sobre um projeto.
+
+Nome: ${nome}
+Empresa: ${empresa}
+Contato: ${contato}
+Tipo de projeto: ${tipo}
+Problema atual: ${problema}
+Prazo desejado: ${prazo}
+
+Vi seu site da Andrey Systems e gostaria de um direcionamento.`,
     finalBadge: "Contato",
     finalTitle: "Vamos organizar sua empresa com tecnologia?",
-    finalPrimary: "Quero sair das planilhas",
-    finalSecondary: "Chamar no Instagram",
+    finalPrimary: "Chamar no Instagram",
+    finalSecondary: "Solicitar orçamento",
+    footerContact: "Andrey Systems · @andreyfabricio_ · orcamento@andrey.systems",
     footerRight: "Sites, sistemas e automações",
     footerLegal: "Todos os direitos reservados.",
     servicesCards: [
@@ -130,7 +151,7 @@ const translations = {
       "Status: template demonstrativo · Público: academias e fitness",
       "Status: template demonstrativo · Público: igrejas e comunidades",
     ],
-    projectDirectCtas: ["Chamar no Direct", "Chamar no Direct", "Chamar no Direct", "Chamar no Direct"],
+    projectDirectCtas: ["Chamar no Instagram", "Chamar no Instagram", "Chamar no Instagram", "Chamar no Instagram"],
     templatePreviews: [
       ["Obras & Impermeabilização", "Orçamento técnico em até 24h", "Solicitar orçamento"],
       ["Treino forte, rotina clara", "Planos, horários e matrícula online", "Começar agora"],
@@ -151,7 +172,7 @@ const translations = {
       ["03", "Módulos", "Mais de 7 módulos conectando CRM, orçamentos, OS, materiais, estoque, garantia e financeiro."],
       ["04", "Resultado", "Mais controle, menos retrabalho e uma operação preparada para crescer com organização."],
     ],
-    timelineItems: ["CRM", "Orçamento", "OS", "Materiais", "Estoque", "Garantia", "Financeiro"],
+    timelineItems: ["CRM", "Orçamento", "OS", "Materiais", "Estoque", "Garantia", "Financeiro", "Permissões", "Backup"],
     caseProof: [
       ["Tecnologias", "React, TypeScript, Node.js, rotas internas, componentes reutilizáveis e estrutura modular."],
       ["Integrações", "CRM, orçamento, OS, materiais, estoque, garantia e financeiro trabalhando em fluxo conectado."],
@@ -160,10 +181,10 @@ const translations = {
     resultItems: ["Centralização de processos", "Redução de planilhas", "Controle de estoque integrado", "Fluxo operacional conectado", "Histórico rastreável"],
     developmentStatus: "Status: Em desenvolvimento",
     developmentPreviewLabel: "Prévias reais do Entreosalvos",
-    testimonials: [
-      "“O sistema ficou muito mais fácil de usar do que eu imaginava. Conseguimos organizar clientes, materiais e serviços em um só lugar.”",
-      "“Todas as alterações que pedi foram feitas rapidamente. O resultado ficou exatamente como eu precisava.”",
-      "“Gostei porque não entregaram apenas um site bonito. Entenderam o problema da empresa e resolveram.”",
+    evidenceCards: [
+      ["01", "ERP IMPPEL", "Sistema real criado para organizar operação, estoque, materiais, orçamentos e financeiro."],
+      ["02", "Site Andrey Systems", "Portfólio próprio criado para apresentar serviços, projetos e formas de contato."],
+      ["03", "Entreosalvos", "Produto próprio em desenvolvimento, usado como laboratório de SaaS, rotina e experiência digital."],
     ],
     faqItems: [
       ["Quanto custa um sistema?", "Depende dos módulos, integrações e nível de personalização. O orçamento começa depois de entender o problema."],
@@ -172,15 +193,15 @@ const translations = {
       ["Posso pedir novas funções?", "Sim. A ideia é que o sistema possa evoluir com novos módulos, regras e fluxos conforme a empresa cresce."],
       ["O sistema é personalizado?", "Sim. O desenvolvimento é pensado para a rotina do negócio, evitando soluções genéricas que não encaixam na operação."],
     ],
-    quoteLabels: ["Nome", "Empresa", "Segmento", "O que precisa", "Orçamento aproximado"],
-    quotePlaceholders: ["Ex.: construção civil, academia, igreja", "Site, ERP, automação, landing page..."],
-    quoteOptions: ["Ainda não defini", "Até R$ 1.000", "R$ 1.000 a R$ 3.000", "R$ 3.000 a R$ 7.000", "Acima de R$ 7.000"],
-    contactSecondary: "Quero um sistema para meu negócio",
-    contactTertiary: "Chamar no Instagram",
+    quoteLabels: ["Nome", "Empresa", "E-mail ou telefone", "Tipo de projeto", "Principal problema atual", "Prazo desejado"],
+    quotePlaceholders: ["Ex.: e-mail, WhatsApp ou telefone", "Ex.: processos em planilhas, estoque sem controle, site antigo...", "Ex.: este mês, próximo trimestre, sem prazo definido"],
+    quoteOptions: ["Site profissional", "Landing page", "ERP personalizado", "Sistema sob medida", "Automação", "Consultoria"],
+    contactSecondary: "Solicitar orçamento",
+    contactTertiary: "",
     erpPageBadge: "Case ERP personalizado",
     erpPageTitle: "ERP IMPPEL operação conectada",
     erpPageText: "Sistema criado para centralizar processos internos, reduzir dependência de planilhas e conectar setores em um fluxo operacional mais claro.",
-    erpPageCta: "Quero um ERP parecido",
+    erpPageCta: "Solicitar orçamento",
     erpSecondary: "Chamar no Instagram",
     erpOtherProjects: "Ver outros projetos",
     erpFooterRight: "Case ERP IMPPEL",
@@ -212,8 +233,10 @@ const translations = {
     heroBadge: "Custom software",
     heroTitle: "Websites, ERPs and automation for companies ready to grow",
     heroText: "We build websites, systems and automations for companies ready to leave spreadsheets behind, organize processes and sell with more clarity.",
-    heroPrimary: "Organize my company",
-    heroSecondary: "View projects",
+    heroPrimary: "Message on Instagram",
+    heroSecondary: "Request a quote",
+    heroProofTitle: "Real project developed for IMPPEL",
+    heroProofText: "ERP with CRM, quotes, work orders, materials, inventory, finance, warranties, role permissions and backup.",
     heroChips: ["Websites", "Custom Software", "Business ERP", "Process Automation", "Operational Consulting"],
     servicesKicker: "Services",
     servicesTitle: "Websites, systems and automation to organize your business.",
@@ -234,8 +257,8 @@ const translations = {
     directCta: "Message on Instagram",
     caseBadge: "Main case",
     caseTitle: "ERP IMPPEL",
-    caseText: "A system created to centralize information, organize internal modules and give more control to an operation that relied on manual processes.",
-    caseCta: "I want a similar system",
+    caseText: "ERP IMPPEL was developed to centralize internal processes for a real company: clients, quotes, work orders, materials, inventory, finance and after-sales.",
+    caseCta: "Request a quote",
     resultsKicker: "Results",
     resultsTitle: "The expected result is a clearer operation.",
     resultsText: "No magic promises: the focus is reducing mess, organizing data and creating more traceability for decisions.",
@@ -250,19 +273,33 @@ const translations = {
     developmentKicker: "Projects in development",
     developmentTitle: "Entreosalvos",
     developmentText: "App focused on personal growth, habits, challenges and daily evolution.",
-    feedbackKicker: "Feedback",
-    feedbackTitle: "Simple and direct client-style feedback.",
-    feedbackText: "Objective notes about organization, agility and understanding the problem before delivery.",
+    feedbackKicker: "Evidence",
+    feedbackTitle: "Evidence of the work.",
+    feedbackText: "Honest proof of what has already been built, without generic testimonials or invented promises.",
     faqKicker: "Frequently asked questions",
     quoteKicker: "Budget",
     quoteTitle: "Tell us what you need.",
-    quoteText: "Fill in the main details and continue the conversation on Instagram.",
-    quoteButton: "Continue on Instagram",
-    quoteEmailButton: "Send email / request a quote",
+    quoteText: "Fill in the main details. The site creates a ready-to-send message for Instagram or email.",
+    quoteButton: "Message on Instagram",
+    quoteEmailButton: "Send by email",
+    quoteMessageTitle: "Ready message to copy",
+    quoteCopyButton: "Copy message",
+    quoteCopied: "Ready message copied. If Direct does not open with pre-filled text, paste the message into the conversation.",
+    quoteTemplate: ({ nome, empresa, contato, tipo, problema, prazo }) => `Hi, Andrey! I want to talk about a project.
+
+Name: ${nome}
+Company: ${empresa}
+Contact: ${contato}
+Project type: ${tipo}
+Current problem: ${problema}
+Desired timeline: ${prazo}
+
+I saw the Andrey Systems website and would like some direction.`,
     finalBadge: "Contact",
     finalTitle: "Let’s organize your company with technology.",
-    finalPrimary: "Move out of spreadsheets",
-    finalSecondary: "Message on Instagram",
+    finalPrimary: "Message on Instagram",
+    finalSecondary: "Request a quote",
+    footerContact: "Andrey Systems · @andreyfabricio_ · orcamento@andrey.systems",
     footerRight: "Websites, systems and automation",
     footerLegal: "All rights reserved.",
     servicesCards: [
@@ -339,7 +376,7 @@ const translations = {
       ["03", "Modules", "More than 7 modules connecting CRM, quotes, work orders, materials, inventory, warranty and finance."],
       ["04", "Result", "More control, less rework and an operation prepared to grow with organization."],
     ],
-    timelineItems: ["CRM", "Quotes", "Work orders", "Materials", "Inventory", "Warranty", "Finance"],
+    timelineItems: ["CRM", "Quotes", "Work orders", "Materials", "Inventory", "Warranty", "Finance", "Permissions", "Backup"],
     caseProof: [
       ["Technologies", "React, TypeScript, Node.js, internal routes, reusable components and modular structure."],
       ["Integrations", "CRM, quotes, work orders, materials, inventory, warranty and finance working in one connected flow."],
@@ -348,10 +385,10 @@ const translations = {
     resultItems: ["Process centralization", "Spreadsheet reduction", "Integrated inventory control", "Connected operational flow", "Traceable history"],
     developmentStatus: "Status: In development",
     developmentPreviewLabel: "Real Entreosalvos previews",
-    testimonials: [
-      "“The system became much easier to use than I expected. We organized clients, materials and services in one place.”",
-      "“Every change I requested was handled quickly. The result matched exactly what I needed.”",
-      "“I liked that it was not just a beautiful website. They understood the company problem and solved it.”",
+    evidenceCards: [
+      ["01", "ERP IMPPEL", "Real system created to organize operations, inventory, materials, quotes and finance."],
+      ["02", "Andrey Systems Website", "Own portfolio created to present services, projects and contact paths."],
+      ["03", "Entreosalvos", "Own product in development, used as a SaaS, routine and digital experience lab."],
     ],
     faqItems: [
       ["How much does a system cost?", "It depends on modules, integrations and the level of customization. The quote starts after understanding the problem."],
@@ -360,15 +397,15 @@ const translations = {
       ["Can I request new features?", "Yes. The idea is that the system can evolve with new modules, rules and flows as the company grows."],
       ["Is the system customized?", "Yes. Development is designed around the business routine, avoiding generic solutions that do not fit the operation."],
     ],
-    quoteLabels: ["Name", "Company", "Industry", "What do you need?", "Approximate budget"],
-    quotePlaceholders: ["Ex.: construction, gym, church", "Website, ERP, automation, landing page..."],
-    quoteOptions: ["Not defined yet", "Up to R$ 1,000", "R$ 1,000 to R$ 3,000", "R$ 3,000 to R$ 7,000", "Above R$ 7,000"],
-    contactSecondary: "I want a system for my business",
-    contactTertiary: "Message on Instagram",
+    quoteLabels: ["Name", "Company", "Email or phone", "Project type", "Main current problem", "Desired timeline"],
+    quotePlaceholders: ["Ex.: email, WhatsApp or phone", "Ex.: spreadsheet processes, uncontrolled inventory, old website...", "Ex.: this month, next quarter, no defined deadline"],
+    quoteOptions: ["Professional website", "Landing page", "Custom ERP", "Custom system", "Automation", "Consulting"],
+    contactSecondary: "Request a quote",
+    contactTertiary: "",
     erpPageBadge: "Custom ERP case",
     erpPageTitle: "ERP IMPPEL connected operation",
     erpPageText: "A system created to centralize internal processes, reduce spreadsheet dependency and connect departments in a clearer operational flow.",
-    erpPageCta: "I want a similar ERP",
+    erpPageCta: "Request a quote",
     erpSecondary: "Message on Instagram",
     erpOtherProjects: "View other projects",
     erpFooterRight: "ERP IMPPEL case",
@@ -476,6 +513,8 @@ const applyLanguage = (lang) => {
   setText(".hero-content > p:not(.eyebrow)", copy.heroText);
   setText(".hero-actions .button.primary", copy.heroPrimary);
   setText(".hero-actions .button.secondary", copy.heroSecondary);
+  setText(".hero-proof strong", copy.heroProofTitle);
+  setText(".hero-proof p", copy.heroProofText);
   setAllText(".hero-footer span", copy.heroChips);
   setText("#servicos .section-kicker p", copy.servicesKicker);
   setText("#servicos .section-heading h2", copy.servicesTitle);
@@ -538,26 +577,29 @@ const applyLanguage = (lang) => {
   setText("#feedbacks .section-kicker p", copy.feedbackKicker);
   setText("#feedbacks .section-heading h2", copy.feedbackTitle);
   setText("#feedbacks .section-heading p", copy.feedbackText);
-  setAllText("#feedbacks .testimonial-card p", copy.testimonials);
+  setCards("#feedbacks .testimonial-card", copy.evidenceCards, ["span", "h3", "p"]);
   setText("#faq .section-kicker p", copy.faqKicker);
   setCards("#faq .faq-item", copy.faqItems, ["h3", "p"]);
   setText("#orcamento .section-kicker p", copy.quoteKicker);
   setText("#orcamento .section-heading h2", copy.quoteTitle);
   setText("#orcamento .section-heading p", copy.quoteText);
   setLabelTexts("#quoteForm label", copy.quoteLabels);
-  setAttribute('#quoteForm input[name="segmento"]', "placeholder", copy.quotePlaceholders[0]);
-  setAttribute('#quoteForm textarea[name="necessidade"]', "placeholder", copy.quotePlaceholders[1]);
+  setAttribute('#quoteForm input[name="contato"]', "placeholder", copy.quotePlaceholders[0]);
+  setAttribute('#quoteForm textarea[name="problema"]', "placeholder", copy.quotePlaceholders[1]);
+  setAttribute('#quoteForm input[name="prazo"]', "placeholder", copy.quotePlaceholders[2]);
   setOptions("#quoteForm option", copy.quoteOptions);
-  setText("#quoteForm button", copy.quoteButton);
+  setText('#quoteForm button[type="submit"]', copy.quoteButton);
   setText("#quoteForm .quote-email-link", copy.quoteEmailButton);
+  setText("#quoteMessage > span", copy.quoteMessageTitle);
+  setText("#quoteCopyButton", copy.quoteCopyButton);
   setText("#contato .eyebrow", copy.finalBadge);
   setText("#contato h2", copy.finalTitle);
   setText("#contato .button.primary", copy.finalPrimary);
-  setAllText("#contato .button.secondary", [copy.contactSecondary, copy.contactTertiary]);
-  if (document.querySelector(".case-page-hero")) {
-    setText(".site-footer span:last-child", copy.erpFooterRight);
-  } else {
-    setText(".site-footer span:last-child", `${new Date().getFullYear()} — ${copy.footerLegal}`);
+  setAllText("#contato .button.secondary", [copy.contactSecondary]);
+  const footerContact = document.querySelector(".site-footer span:last-child");
+  if (footerContact) {
+    footerContact.innerHTML = `<a href="https://www.instagram.com/andreyfabricio_/" target="_blank" rel="noreferrer">@andreyfabricio_</a> · <a href="mailto:${quoteEmail}">${quoteEmail}</a> · ${new Date().getFullYear()} — ${copy.footerLegal}`;
+    footerContact.setAttribute("aria-label", copy.footerContact);
   }
   setText(".case-page-copy .eyebrow", copy.erpPageBadge);
   setText(".case-page-copy h1", copy.erpPageTitle);
@@ -583,6 +625,7 @@ const applyLanguage = (lang) => {
   });
   localStorage.setItem(storageKeys.lang, lang);
   applyTheme(localStorage.getItem(storageKeys.theme) || "dark");
+  updateQuoteMessage(false);
 };
 
 document.body.classList.remove("is-loading");
@@ -660,8 +703,70 @@ if (parallaxElements.length) {
   window.addEventListener("resize", requestParallax);
 }
 
-quoteForm?.addEventListener("submit", (event) => {
+const getQuoteCopy = () => translations[localStorage.getItem(storageKeys.lang) || "pt"] || translations.pt;
+
+const getQuoteData = () => {
+  if (!quoteForm) return null;
+  const data = new FormData(quoteForm);
+  const fallback = localStorage.getItem(storageKeys.lang) === "en" ? "Not defined" : "Não informado";
+  return {
+    nome: String(data.get("nome") || fallback).trim() || fallback,
+    empresa: String(data.get("empresa") || fallback).trim() || fallback,
+    contato: String(data.get("contato") || fallback).trim() || fallback,
+    tipo: String(data.get("tipo") || fallback).trim() || fallback,
+    problema: String(data.get("problema") || fallback).trim() || fallback,
+    prazo: String(data.get("prazo") || fallback).trim() || fallback,
+  };
+};
+
+const buildQuoteMessage = () => {
+  const copy = getQuoteCopy();
+  const data = getQuoteData();
+  return data ? copy.quoteTemplate(data) : "";
+};
+
+const updateQuoteMessage = (showMessage = false) => {
+  const message = buildQuoteMessage();
+  const copy = getQuoteCopy();
+  if (quoteMessageText) quoteMessageText.textContent = message;
+  if (quoteMessage) quoteMessage.hidden = !showMessage;
+  if (quoteMessage?.querySelector("span")) quoteMessage.querySelector("span").textContent = copy.quoteMessageTitle;
+  if (quoteEmailLink) {
+    const subject = encodeURIComponent("Orçamento Andrey Systems");
+    const body = encodeURIComponent(message);
+    quoteEmailLink.href = `mailto:${quoteEmail}?subject=${subject}&body=${body}`;
+  }
+  return message;
+};
+
+quoteForm?.addEventListener("input", () => updateQuoteMessage(true));
+
+quoteEmailLink?.addEventListener("click", () => updateQuoteMessage(true));
+
+quoteCopyButton?.addEventListener("click", async () => {
+  const message = updateQuoteMessage(true);
+  const copy = getQuoteCopy();
+
+  try {
+    await navigator.clipboard?.writeText(message);
+    if (quoteMessage?.querySelector("span")) quoteMessage.querySelector("span").textContent = copy.quoteCopied;
+  } catch {
+    if (quoteMessage?.querySelector("span")) quoteMessage.querySelector("span").textContent = copy.quoteMessageTitle;
+  }
+});
+
+quoteForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
+  const message = updateQuoteMessage(true);
+  const copy = getQuoteCopy();
+
+  try {
+    await navigator.clipboard?.writeText(message);
+    if (quoteMessage?.querySelector("span")) quoteMessage.querySelector("span").textContent = copy.quoteCopied;
+  } catch {
+    if (quoteMessage?.querySelector("span")) quoteMessage.querySelector("span").textContent = copy.quoteMessageTitle;
+  }
+
   window.open(instagramDirect, "_blank", "noopener,noreferrer");
 });
 
