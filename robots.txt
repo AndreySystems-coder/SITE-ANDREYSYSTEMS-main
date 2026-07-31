@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://andrey.systems/sitemap.xml
+Sitemap: https://site-andrey-systems.vercel.app/sitemap.xml
