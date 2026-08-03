@@ -22,7 +22,7 @@ Apresentar projetos, soluções e formas de contato de Andrey Fabricio de forma 
 index.html                       Home e portfólio principal
 projetos/erp-imppel/index.html   Case completo ERP IMPPEL
 styles.css                       Design system, layout, responsividade e animações
-script.js                        Tema, idioma, navegação, animações e formulário
+script.js                        Idioma, navegação, animações e formulário
 assets/images/                   Imagens reais e mockups dos projetos
 robots.txt                       Indexação
 sitemap.xml                      URLs públicas
@@ -57,7 +57,7 @@ Pushes em `main` geram Production Deployments automaticamente.
 
 1. Conferir `git status`.
 2. Alterar HTML/CSS/JS preservando a arquitetura estática.
-3. Validar localmente home, case ERP, links, formulário, idiomas, tema, mobile e SEO.
+3. Validar localmente home, case ERP, links, formulário, idiomas, identidade dark, mobile e SEO.
 4. Executar `git diff --check`.
 5. Commitar e enviar para `origin/main`.
 6. Validar a URL pública da Vercel.

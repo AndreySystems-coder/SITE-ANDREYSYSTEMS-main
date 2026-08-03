@@ -21,7 +21,7 @@
 | `index.html` | Home e portfólio principal |
 | `projetos/erp-imppel/index.html` | Case completo do ERP IMPPEL |
 | `styles.css` | Layout, design system, responsividade e animações |
-| `script.js` | Tema, idioma, navegação, formulário e animações leves |
+| `script.js` | Idioma, navegação, formulário e animações leves |
 | `assets/images/` | Imagens reais e mockups dos projetos |
 | `robots.txt` / `sitemap.xml` | SEO técnico |
 
@@ -40,13 +40,13 @@ git diff --check
 - Não usar linguagem que sugira equipe inexistente.
 - Manter Instagram `andreyfabricio_` e e-mail `orcamento@andrey.systems`.
 - Manter `.vercel/`, tokens, `.env`, backups e temporários fora do Git.
-- Preservar PT/EN, tema claro/escuro, formulário, mailto e links principais.
+- Preservar PT/EN, identidade dark-only, formulário, mailto e links principais.
 
 ## Validação obrigatória
 
 - Home e `/projetos/erp-imppel/` carregando com HTTP 200.
 - CSS, JavaScript, imagens, robots e sitemap carregando conteúdo correto.
-- Menu, âncoras, idioma, tema e formulário funcionando.
+- Menu, âncoras, idioma, identidade dark e formulário funcionando.
 - Desktop, mobile e viewport de Stories sem overflow horizontal.
 - Console sem erros relevantes.
 - `git diff --check` antes de commit.
