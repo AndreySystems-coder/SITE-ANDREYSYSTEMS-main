@@ -64,10 +64,10 @@ Pushes em `main` geram Production Deployments automaticamente.
 
 ## Animações principais
 
-- Navegação com indicador ativo inspirada em Tubelight Navbar.
-- Hero com mockups em profundidade.
+- Navegacao com indicador ativo e bottom menu mobile.
+- Hero dark editorial com acento vermelho e mockups reais em profundidade.
 - Featured Project com transformação por scroll inspirada em Container Scroll Animation.
-- Solution cards com spotlight discreto.
+- Cards de solucoes e projetos com spotlight discreto.
 - How I Work com cards visuais compactos.
 
 Todas as animações respeitam `prefers-reduced-motion`.

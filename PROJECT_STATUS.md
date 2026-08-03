@@ -2,13 +2,17 @@
 
 ## Fase atual
 
-Preparacao para o redesign definitivo.
+Redesign final implementado em validacao.
 
 ## Funcionalidades concluidas
 
-- Site estatico publicado na Vercel.
-- Home com Hero, Featured Project, Projects, Solutions, How I Work, Results, Contact e Footer.
-- Pagina de case do ERP IMPPEL em `/projetos/erp-imppel/`.
+- Site estatico publicado na Vercel e mantido em arquitetura HTML/CSS/JavaScript.
+- Home reorganizada em Navbar, Hero, ERP IMPPEL, Projetos selecionados, Solucoes, Como eu trabalho, Resultados construidos, Contato e Footer.
+- Hero dark editorial com acento vermelho, mockups reais e CTAs principais.
+- ERP IMPPEL destacado como prova principal com tabs navegaveis e telas reais.
+- Projetos selecionados com foco em provas visuais ou funcionais reais.
+- Bottom menu mobile para navegacao rapida.
+- Pagina de case do ERP IMPPEL em `/projetos/erp-imppel/` alinhada ao visual atual.
 - Seletor PT/EN.
 - Identidade visual dark-only.
 - Formulario com mensagem gerada para mailto e chamada para Instagram.
@@ -16,17 +20,15 @@ Preparacao para o redesign definitivo.
 
 ## Pendencias
 
-- Definir layout definitivo de cada secao.
-- Definir imagens/mockups finais.
-- Revisar interacoes finais antes da proxima publicacao.
-- Decidir destino da pasta antiga em `C:\PROJETOS\SITE-ANDREYSYSTEMS-main`.
+- Validar a URL publica da Vercel apos o push final.
+- Avaliar em aparelho fisico antes de usar como cenario definitivo para Stories.
 
 ## Limitacoes
 
 - Projeto sem backend.
 - Formulario depende de Instagram/mailto.
-- Nao ha testes automatizados formais; validacao e feita por rotas e inspeção local.
+- Nao ha testes automatizados formais; validacao e feita por rotas, navegador e inspeção local.
 
 ## Proxima acao
 
-Planejar o redesign final a partir dos blocos comentados em `index.html` e `projetos/erp-imppel/index.html`.
+Publicar o commit final e validar a producao em `https://site-andrey-systems.vercel.app`.
